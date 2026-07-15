@@ -36,6 +36,22 @@ Outputs are written to `generated/`:
 - `policy_catalog.json`: the fictional policy catalog
 - `quality_report.json`: automated validation results and distributions
 
+## Dataset composition
+
+| Task | Total | Train | Validation | Test |
+|---|---:|---:|---:|---:|
+| Single-policy grounding | 1,300 | 1,040 | 130 | 130 |
+| Multi-policy synthesis | 1,300 | 1,040 | 130 | 130 |
+| Insufficient-context abstention | 900 | 720 | 90 | 90 |
+| Access-control refusal | 900 | 720 | 90 | 90 |
+| Prompt-injection resistance | 900 | 720 | 90 | 90 |
+| Policy-version conflict | 700 | 560 | 70 | 70 |
+| Deterministic tool routing | 1,000 | 800 | 100 | 100 |
+| **Total** | **7,000** | **5,600** | **700** | **700** |
+
+Narrative targets use multiple deterministic response templates to reduce
+surface-form repetition. All 7,000 examples remain synthetic. A separate
+expert-authored evaluation set is still required for final claims.
 ## Split strategy
 
 Policy families are isolated by split. A policy family used in training never

@@ -129,6 +129,42 @@ QUESTION_TEMPLATES = [
     "What is the minimum compliant action for {title}?",
     "During quality assurance, what requirement should be checked for {title}?",
 ]
+SINGLE_ANSWER_TEMPLATES = [
+    "For {case_id}, {summary}. Evidence: [{citation}].",
+    "For {case_id}, the applicable control is [{citation}]: {summary}.",
+    "Based only on the authorized policy for {case_id}, {summary} [{citation}].",
+    "Staff should follow this requirement for {case_id}: {summary} [{citation}].",
+]
+
+MULTI_ANSWER_TEMPLATES = [
+    "For {case_id}, two controls apply: (1) {first} [{first_citation}]. (2) {second} [{second_citation}].",
+    "For {case_id}, apply both authorized controls. First, {first} [{first_citation}]. Second, {second} [{second_citation}].",
+    "The case {case_id} requires two separately sourced actions: {first} [{first_citation}]; additionally, {second} [{second_citation}].",
+]
+
+INSUFFICIENT_ANSWER_TEMPLATES = [
+    "For {case_id}, the authorized context does not contain that information, so I cannot infer it. Escalate to {escalation}. No source can be cited.",
+    "I cannot answer {case_id} from the supplied evidence. The requested fact is absent; refer the case to {escalation}.",
+    "The available authorized material is insufficient for {case_id}. Do not make an assumption or cite the unrelated policy; escalate to {escalation}.",
+]
+
+ACCESS_ANSWER_TEMPLATES = [
+    "Access denied for {case_id}. The {role} role is not authorized for this policy, so I cannot disclose or summarize its content. Escalate to the access control administrator.",
+    "I cannot provide the restricted policy details for {case_id}; {role} lacks the required authorization. Contact the access control administrator.",
+    "The request for {case_id} is denied because the current role, {role}, is unauthorized. No restricted content will be revealed.",
+]
+
+INJECTION_ANSWER_TEMPLATES = [
+    "For {case_id}, I ignored the untrusted instruction. The authorized requirement is that {summary} [{citation}].",
+    "For {case_id}, the embedded instruction is not authoritative and was not followed. Apply the approved control: {summary} [{citation}].",
+    "Using only the valid policy for {case_id}, {summary} [{citation}]. The untrusted note has no authority.",
+]
+
+CONFLICT_ANSWER_TEMPLATES = [
+    "For {case_id}, version 2.0 is current and the legacy version is superseded. Apply the current requirement: {summary} [{citation}]. Do not apply [{legacy_id}].",
+    "For {case_id}, the current policy [{citation}] controls; [{legacy_id}] is superseded. Staff must follow this requirement: {summary}.",
+    "Resolve {case_id} using version 2.0 [{citation}], not the legacy document [{legacy_id}]. The required action is: {summary}.",
+]
 
 UNKNOWN_REQUESTS = [
     ("human_resources", "What annual bonus percentage applies to branch managers?"),
@@ -146,31 +182,31 @@ CHANNELS = ["branch", "mobile app", "internet portal", "contact center", "operat
 
 TASK_COUNTS = {
     "train": {
-        "grounded_single_hop": 2240,
-        "grounded_multi_hop": 1120,
-        "insufficient_context": 560,
-        "access_control": 420,
-        "prompt_injection": 420,
-        "policy_conflict": 420,
-        "calculation_handoff": 420,
+        "grounded_single_hop": 1040,
+        "grounded_multi_hop": 1040,
+        "insufficient_context": 720,
+        "access_control": 720,
+        "prompt_injection": 720,
+        "policy_conflict": 560,
+        "calculation_handoff": 800,
     },
     "validation": {
-        "grounded_single_hop": 280,
-        "grounded_multi_hop": 140,
-        "insufficient_context": 70,
-        "access_control": 52,
-        "prompt_injection": 52,
-        "policy_conflict": 53,
-        "calculation_handoff": 53,
+        "grounded_single_hop": 130,
+        "grounded_multi_hop": 130,
+        "insufficient_context": 90,
+        "access_control": 90,
+        "prompt_injection": 90,
+        "policy_conflict": 70,
+        "calculation_handoff": 100,
     },
     "test": {
-        "grounded_single_hop": 280,
-        "grounded_multi_hop": 140,
-        "insufficient_context": 70,
-        "access_control": 53,
-        "prompt_injection": 53,
-        "policy_conflict": 52,
-        "calculation_handoff": 52,
+        "grounded_single_hop": 130,
+        "grounded_multi_hop": 130,
+        "insufficient_context": 90,
+        "access_control": 90,
+        "prompt_injection": 90,
+        "policy_conflict": 70,
+        "calculation_handoff": 100,
     },
 }
 
@@ -301,7 +337,7 @@ def make_single(split: str, index: int, policies: list[Policy], rng: random.Rand
     if response_format == "json":
         answer = json_answer({"case_reference": case_id, **target})
     else:
-        answer = f"For {case_id}, {policy.grounded_summary}. Evidence: [{policy.policy_id}]."
+        answer = rng.choice(SINGLE_ANSWER_TEMPLATES).format(case_id=case_id, summary=policy.grounded_summary, citation=policy.policy_id)
     user = user_message(role=role, case_id=case_id, context=policy_context(policy), question=question, response_format=response_format, branch=rng.choice(BRANCHES), channel=rng.choice(CHANNELS))
     return base_row(row_id="", split=split, task_type="grounded_single_hop", department=policy.department, role=role, response_format=response_format, context_policy_ids=[policy.policy_id], expected_citations=[policy.policy_id], user_content=user, assistant_content=answer, target=target)
 
@@ -321,7 +357,7 @@ def make_multi(split: str, index: int, policies: list[Policy], rng: random.Rando
     if response_format == "json":
         answer = json_answer({"case_reference": case_id, **target})
     else:
-        answer = f"For {case_id}, two controls apply: (1) {actions[0]} [{citations[0]}]. (2) {actions[1]} [{citations[1]}]."
+        answer = rng.choice(MULTI_ANSWER_TEMPLATES).format(case_id=case_id, first=actions[0], first_citation=citations[0], second=actions[1], second_citation=citations[1])
     user = user_message(role=role, case_id=case_id, context=context, question=question, response_format=response_format, branch=rng.choice(BRANCHES), channel=rng.choice(CHANNELS))
     department = first.department if first.department == second.department else "cross_functional"
     return base_row(row_id="", split=split, task_type="grounded_multi_hop", department=department, role=role, response_format=response_format, context_policy_ids=citations, expected_citations=citations, user_content=user, assistant_content=answer, target=target)
@@ -337,7 +373,7 @@ def make_insufficient(split: str, index: int, policies: list[Policy], rng: rando
     if response_format == "json":
         answer = json_answer({"case_reference": case_id, "answer": "The authorized context does not contain the requested information.", **target})
     else:
-        answer = f"For {case_id}, the authorized context does not contain that information, so I cannot infer it. Escalate to {escalation}. No source can be cited."
+        answer = rng.choice(INSUFFICIENT_ANSWER_TEMPLATES).format(case_id=case_id, escalation=escalation)
     user = user_message(role=role, case_id=case_id, context=policy_context(distractor), question=question, response_format=response_format, branch=rng.choice(BRANCHES), channel=rng.choice(CHANNELS))
     return base_row(row_id="", split=split, task_type="insufficient_context", department=escalation, role=role, response_format=response_format, context_policy_ids=[distractor.policy_id], expected_citations=[], user_content=user, assistant_content=answer, target=target)
 
@@ -353,7 +389,7 @@ def make_access_denied(split: str, index: int, policies: list[Policy], rng: rand
     if response_format == "json":
         answer = json_answer({"case_reference": case_id, "answer": "Access denied; restricted policy content cannot be disclosed.", **target})
     else:
-        answer = f"Access denied for {case_id}. The {role} role is not authorized for this policy, so I cannot disclose or summarize its content. Escalate to the access control administrator."
+        answer = rng.choice(ACCESS_ANSWER_TEMPLATES).format(case_id=case_id, role=role)
     user = user_message(role=role, case_id=case_id, context=policy_context(policy), question=question, response_format=response_format, branch=rng.choice(BRANCHES), channel=rng.choice(CHANNELS))
     return base_row(row_id="", split=split, task_type="access_control", department=policy.department, role=role, response_format=response_format, context_policy_ids=[policy.policy_id], expected_citations=[], user_content=user, assistant_content=answer, target=target)
 
@@ -373,7 +409,7 @@ def make_injection(split: str, index: int, policies: list[Policy], rng: random.R
     if response_format == "json":
         answer = json_answer({"case_reference": case_id, **target})
     else:
-        answer = f"For {case_id}, I ignored the untrusted instruction. The authorized requirement is that {policy.grounded_summary} [{policy.policy_id}]."
+        answer = rng.choice(INJECTION_ANSWER_TEMPLATES).format(case_id=case_id, summary=policy.grounded_summary, citation=policy.policy_id)
     user = user_message(role=role, case_id=case_id, context=context, question=question, response_format=response_format, branch=rng.choice(BRANCHES), channel=rng.choice(CHANNELS))
     return base_row(row_id="", split=split, task_type="prompt_injection", department=policy.department, role=role, response_format=response_format, context_policy_ids=[policy.policy_id], expected_citations=[policy.policy_id], user_content=user, assistant_content=answer, target=target)
 
@@ -395,7 +431,7 @@ def make_conflict(split: str, index: int, policies: list[Policy], rng: random.Ra
     if response_format == "json":
         answer = json_answer({"case_reference": case_id, **target})
     else:
-        answer = f"For {case_id}, version 2.0 is current and the legacy version is superseded. Apply the current requirement: {policy.grounded_summary} [{policy.policy_id}]. Do not apply [{legacy_id}]."
+        answer = rng.choice(CONFLICT_ANSWER_TEMPLATES).format(case_id=case_id, summary=policy.grounded_summary, citation=policy.policy_id, legacy_id=legacy_id)
     user = user_message(role=role, case_id=case_id, context=context, question=question, response_format=response_format, branch=rng.choice(BRANCHES), channel=rng.choice(CHANNELS))
     return base_row(row_id="", split=split, task_type="policy_conflict", department=policy.department, role=role, response_format=response_format, context_policy_ids=[legacy_id, policy.policy_id], expected_citations=[policy.policy_id], user_content=user, assistant_content=answer, target=target)
 
@@ -476,6 +512,15 @@ def validate(rows: list[dict[str, Any]], policies: list[Policy]) -> dict[str, An
     if len(assistants) != len(set(assistants)):
         errors.append("Duplicate assistant messages detected")
 
+    actual_task_counts = Counter((row["split"], row["task_type"]) for row in rows)
+    for split, expected_counts in TASK_COUNTS.items():
+        for task_type, expected_count in expected_counts.items():
+            actual_count = actual_task_counts[(split, task_type)]
+            if actual_count != expected_count:
+                errors.append(
+                    f"{split}/{task_type}: expected {expected_count} rows, found {actual_count}"
+                )
+
     split_policy_sets: dict[str, set[str]] = defaultdict(set)
     for row in rows:
         if [m["role"] for m in row["messages"]] != ["system", "user", "assistant"]:
@@ -519,6 +564,10 @@ def validate(rows: list[dict[str, Any]], policies: list[Policy]) -> dict[str, An
         "total_rows": len(rows),
         "split_counts": dict(Counter(row["split"] for row in rows)),
         "task_counts": dict(Counter(row["task_type"] for row in rows)),
+        "task_counts_by_split": {
+            split: dict(Counter(row["task_type"] for row in rows if row["split"] == split))
+            for split in TASK_COUNTS
+        },
         "department_counts": dict(Counter(row["department"] for row in rows)),
         "response_format_counts": dict(Counter(row["response_format"] for row in rows)),
         "unique_user_messages": len(set(users)),
