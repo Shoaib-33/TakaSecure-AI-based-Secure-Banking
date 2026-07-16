@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="TakaSecure synthetic banking policy intelligence console">
+  <title>TakaSecure | Policy Intelligence</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand">
+        <div class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 40 40" role="img">
+            <path d="M20 3 34 9v10c0 9-5.8 15-14 18-8.2-3-14-9-14-18V9l14-6Z" fill="currentColor" opacity=".18"/>
+            <path d="M20 7.5 30 12v7c0 6.5-3.8 11-10 13.7C13.8 30 10 25.5 10 19v-7l10-4.5Z" fill="none" stroke="currentColor" stroke-width="2"/>
+            <path d="m15.5 20 3 3 6.5-7" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2"/>
+          </svg>
+        </div>
+        <div>
+          <strong>TakaSecure</strong>
+          <span>Policy Intelligence</span>
+        </div>
+      </div>
+
+      <nav class="primary-nav" aria-label="Primary navigation">
+        <button class="nav-item active" type="button">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5h14v11H8l-3 3V5Z"/><path d="M8 9h8M8 12h5"/></svg>
+          Policy assistant
+        </button>
+        <a class="nav-item" href="/docs" target="_blank" rel="noreferrer">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h9l3 3v15H6V3Z"/><path d="M14 3v4h4M9 11h6M9 15h6"/></svg>
+          API reference
+        </a>
+      </nav>
+
+      <div class="sidebar-section">
+        <p class="sidebar-label">Intelligence stack</p>
+        <ul class="stack-list">
+          <li><span class="stack-dot teal"></span>Hybrid retrieval</li>
+          <li><span class="stack-dot blue"></span>Adaptive correction</li>
+          <li><span class="stack-dot violet"></span>vLLM + LoRA</li>
+          <li><span class="stack-dot amber"></span>Answer verification</li>
+        </ul>
+      </div>
+
+      <div class="sidebar-footer">
+        <div class="environment-card">
+          <div class="environment-row">
+            <span class="status-pulse" id="sideStatusDot"></span>
+            <span id="sideStatusText">Checking service</span>
+          </div>
+          <small>Synthetic portfolio environment</small>
+        </div>
+        <p class="version">Corpus v4.0 · Adapter v3</p>
+      </div>
+    </aside>
+
+    <main class="main-area">
+      <header class="topbar">
+        <button class="menu-button" id="menuButton" type="button" aria-label="Toggle navigation" aria-expanded="false">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+        <div class="page-title">
+          <p>Internal knowledge workspace</p>
+          <h1>Banking policy assistant</h1>
+        </div>
+        <div class="topbar-actions">
+          <div class="service-status" id="serviceStatus">
+            <span class="status-pulse"></span>
+            <span>Connecting</span>
+          </div>
+          <button class="icon-button" id="newSessionButton" type="button" title="Start a new session" aria-label="Start a new session">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+          </button>
+        </div>
+      </header>
+
+      <div class="workspace">
+        <section class="conversation-panel" aria-label="Policy conversation">
+          <div class="conversation-scroll" id="conversationScroll">
+            <div class="welcome-state" id="welcomeState">
+              <div class="welcome-icon" aria-hidden="true">
+                <svg viewBox="0 0 32 32"><path d="M16 3 27 8v8c0 7.2-4.6 11.7-11 14-6.4-2.3-11-6.8-11-14V8l11-5Z"/><path d="M11 16.5 14.2 20 21 12.5"/></svg>
+              </div>
+              <p class="eyebrow">Grounded policy intelligence</p>
+              <h2>Ask a question about TakaSecure banking policy</h2>
+              <p class="welcome-copy">Answers are generated from the synthetic enterprise policy corpus, checked for evidence support, and returned with traceable citations.</p>
+
+              <div class="suggestion-grid" aria-label="Suggested questions">
+                <button class="suggestion-card" type="button" data-question="What evidence is required for beneficial ownership verification?" data-department="compliance" data-role="compliance_analyst">
+                  <span class="suggestion-tag">Compliance</span>
+                  <strong>Beneficial ownership evidence</strong>
+                  <span>Review the required verification records and approval path.</span>
+                </button>
+                <button class="suggestion-card" type="button" data-question="When is an independent collateral valuation required for retail lending?" data-department="credit" data-role="credit_analyst">
+                  <span class="suggestion-tag">Credit</span>
+                  <strong>Collateral valuation rules</strong>
+                  <span>Find thresholds, document age, and escalation requirements.</span>
+                </button>
+                <button class="suggestion-card" type="button" data-question="What action is required after a new-beneficiary velocity alert?" data-department="fraud" data-role="fraud_analyst">
+                  <span class="suggestion-tag">Fraud</span>
+                  <strong>Transfer velocity alert</strong>
+                  <span>Check hold requirements and investigation timelines.</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="message-list" id="messageList" aria-live="polite"></div>
+          </div>
+
+          <div class="composer-wrap">
+            <form class="composer" id="chatForm">
+              <div class="context-controls">
+                <label>
+                  <span>Role</span>
+                  <select id="roleSelect" name="role">
+                    <option value="employee">Employee</option>
+                    <option value="compliance_analyst">Compliance analyst</option>
+                    <option value="credit_analyst">Credit analyst</option>
+                    <option value="fraud_analyst">Fraud analyst</option>
+                    <option value="operations_analyst">Operations analyst</option>
+                    <option value="security_analyst">Security analyst</option>
+                    <option value="internal_auditor">Internal auditor</option>
+                    <option value="branch_manager">Branch manager</option>
+                  </select>
+                </label>
+                <label>
+                  <span>Department</span>
+                  <select id="departmentSelect" name="department">
+                    <option value="">Auto-detect</option>
+                    <option value="compliance">Compliance</option>
+                    <option value="credit">Credit</option>
+                    <option value="fraud">Fraud</option>
+                    <option value="operations">Operations</option>
+                    <option value="customer_service">Customer service</option>
+                    <option value="information_security">Information security</option>
+                  </select>
+                </label>
+                <label class="date-control">
+                  <span>As-of date</span>
+                  <input id="asOfDate" name="asOfDate" type="date">
+                </label>
+              </div>
+              <div class="prompt-row">
+                <textarea id="questionInput" rows="1" maxlength="4000" placeholder="Ask about a policy, control, procedure, or required evidence…" aria-label="Policy question" required></textarea>
+                <button class="send-button" id="sendButton" type="submit" aria-label="Send question">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 14-7-4 14-3-6-7-1Z"/><path d="m12 13 7-8"/></svg>
+                </button>
+              </div>
+              <div class="composer-meta">
+                <span>Enter to send · Shift + Enter for a new line</span>
+                <span id="characterCount">0 / 4000</span>
+              </div>
+            </form>
+            <p class="disclaimer">Synthetic policy demonstration. Not real banking, legal, or regulatory guidance.</p>
+          </div>
+        </section>
+
+        <aside class="insight-panel" aria-label="RAG diagnostics">
+          <div class="insight-header">
+            <div>
+              <p class="eyebrow">Response intelligence</p>
+              <h2>Grounding details</h2>
+            </div>
+            <span class="verified-badge neutral" id="verificationBadge">Awaiting query</span>
+          </div>
+
+          <div class="metric-grid">
+            <div class="metric-card">
+              <span>Retrieval</span>
+              <strong id="strategyMetric">—</strong>
+            </div>
+            <div class="metric-card">
+              <span>Cache</span>
+              <strong id="cacheMetric">—</strong>
+            </div>
+            <div class="metric-card">
+              <span>Corrections</span>
+              <strong id="correctionMetric">—</strong>
+            </div>
+            <div class="metric-card">
+              <span>Latency</span>
+              <strong id="latencyMetric">—</strong>
+            </div>
+          </div>
+
+          <section class="insight-section">
+            <div class="section-heading">
+              <h3>Citations</h3>
+              <span id="citationCount">0</span>
+            </div>
+            <div class="empty-detail" id="citationEmpty">Policy citations will appear here.</div>
+            <div class="citation-list" id="citationList"></div>
+          </section>
+
+          <section class="insight-section">
+            <div class="section-heading">
+              <h3>Retrieved evidence</h3>
+              <span id="sourceCount">0</span>
+            </div>
+            <div class="empty-detail" id="sourceEmpty">Retrieved source passages will appear after a query.</div>
+            <div class="source-list" id="sourceList"></div>
+          </section>
+
+          <section class="insight-section verifier-section">
+            <div class="section-heading"><h3>Verifier assessment</h3></div>
+            <p id="verifierReason">The grounded-answer verifier has not run yet.</p>
+          </section>
+        </aside>
+      </div>
+    </main>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="/static/app.js" defer></script>
+</body>
+</html>

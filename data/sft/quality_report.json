@@ -1,0 +1,54 @@
+{
+  "valid": true,
+  "errors": [],
+  "total_rows": 7000,
+  "split_counts": {
+    "train": 5600,
+    "validation": 700,
+    "test": 700
+  },
+  "task_counts": {
+    "grounded_single_hop": 2800,
+    "grounded_multi_hop": 1400,
+    "insufficient_context": 700,
+    "access_control": 525,
+    "prompt_injection": 525,
+    "policy_conflict": 525,
+    "calculation_handoff": 525
+  },
+  "department_counts": {
+    "credit": 1244,
+    "compliance": 862,
+    "fraud": 899,
+    "customer_service": 844,
+    "operations": 736,
+    "information_security": 724,
+    "cross_functional": 1253,
+    "human_resources": 88,
+    "treasury": 88,
+    "legal": 88,
+    "finance": 88,
+    "audit": 86
+  },
+  "response_format_counts": {
+    "json": 3212,
+    "narrative": 3788
+  },
+  "unique_user_messages": 7000,
+  "unique_assistant_messages": 7000,
+  "policy_count": 72,
+  "policy_family_count": 36,
+  "policies_by_split": {
+    "train": 48,
+    "validation": 12,
+    "test": 12
+  },
+  "policy_overlap": {
+    "train_validation": 0,
+    "train_test": 0,
+    "validation_test": 0
+  },
+  "synthetic_only": true,
+  "authoritative_regulations": false,
+  "seed": 20260714
+}

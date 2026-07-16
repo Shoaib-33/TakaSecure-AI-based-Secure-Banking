@@ -1,73 +1,87 @@
-# TakaSecure synthetic banking SFT dataset
+# TakaSecure AI-based Secure Banking
 
-This package generates exactly 7,000 English-language chat examples for a
-fictional bank-policy assistant. Every policy, case, institution, identifier,
-and operational rule is synthetic. Nothing in this dataset should be treated
-as Bangladesh Bank guidance, law, or production banking policy.
+TakaSecure is a synthetic banking AI portfolio project combining supervised
+fine-tuning, vLLM serving, adaptive hybrid RAG, structured evaluation, and
+verified-response caching. No content in this repository is real banking
+policy, regulation, or customer data.
 
-## Purpose
+## What the project demonstrates
 
-The dataset teaches model behavior for a private, RAG-grounded banking
-assistant:
+- A reproducible 7,000-example SFT dataset with isolated train, validation, and test policy families.
+- A LoRA adapter trained for citations, structured JSON, abstention, policy conflicts, prompt-injection resistance, and tool routing.
+- vLLM serving through an OpenAI-compatible endpoint.
+- LangChain and LangGraph orchestration with model-selected retrieval strategy.
+- BGE-M3 dense retrieval plus Qdrant BM25 hybrid retrieval and fusion.
+- Multi-query rewriting, cross-encoder reranking, corrective retrieval, and answer verification.
+- Upstash Redis SHA-256 exact-match caching for verified repeated responses.
+- A 176-page synthetic policy corpus and a 166-question RAG benchmark.
+- A responsive professional HTML, CSS, and JavaScript banking policy console.
 
-- evidence-grounded single-policy answers;
-- multi-policy synthesis;
-- abstention when context is insufficient;
-- role-based access denial without leaking restricted content;
-- resistance to instructions embedded in retrieved documents;
-- current-versus-superseded policy resolution;
-- deterministic calculation-tool routing.
+## Repository layout
 
-It is designed for supervised fine-tuning of response behavior. Confidential
-facts and real policies should remain in the RAG system, not model weights.
-
-## Generate
-
-```bash
-python generate_banking_sft.py
+```text
+.
+|-- takasecure_rag/        FastAPI and LangGraph RAG application
+|-- frontend/              HTML, CSS, and JavaScript interface
+|-- scripts/               dataset and policy-corpus generators
+|-- notebooks/             RunPod fine-tuning notebook
+|-- data/
+|   |-- sft/               versioned train/validation/test data
+|   `-- rag/
+|       `-- v4/            current corpus, manifest, and benchmark
+|-- artifacts/             local LoRA archives; large files ignored by Git
+|-- docs/                  RAG setup and operating guide
+|-- tests/                 automated tests
+|-- pyproject.toml         Python dependencies and tooling
+`-- .env.example           environment configuration template
 ```
 
-Outputs are written to `generated/`:
+## Generate the datasets
 
-- `banking_sft_train.jsonl`: 5,600 rows
-- `banking_sft_validation.jsonl`: 700 rows
-- `banking_sft_test.jsonl`: 700 rows
-- `banking_sft_all.jsonl`: all 7,000 rows
-- `policy_catalog.json`: the fictional policy catalog
-- `quality_report.json`: automated validation results and distributions
+```bash
+python scripts/generate_banking_sft.py
+python scripts/generate_enterprise_rag_corpus.py
+```
 
-## Dataset composition
+The SFT generator writes to `data/sft/`. The enterprise corpus generator writes
+to `data/rag/v4/`.
 
-| Task | Total | Train | Validation | Test |
-|---|---:|---:|---:|---:|
-| Single-policy grounding | 1,300 | 1,040 | 130 | 130 |
-| Multi-policy synthesis | 1,300 | 1,040 | 130 | 130 |
-| Insufficient-context abstention | 900 | 720 | 90 | 90 |
-| Access-control refusal | 900 | 720 | 90 | 90 |
-| Prompt-injection resistance | 900 | 720 | 90 | 90 |
-| Policy-version conflict | 700 | 560 | 70 | 70 |
-| Deterministic tool routing | 1,000 | 800 | 100 | 100 |
-| **Total** | **7,000** | **5,600** | **700** | **700** |
+## Fine-tune on RunPod
 
-Narrative targets use multiple deterministic response templates to reduce
-surface-form repetition. All 7,000 examples remain synthetic. A separate
-expert-authored evaluation set is still required for final claims.
-## Split strategy
+Open `notebooks/TakaSecure_RunPod_Finetuning.ipynb` after cloning the repository.
+The notebook discovers the repository root and reads the split files from
+`data/sft/`.
 
-Policy families are isolated by split. A policy family used in training never
-appears in validation or test, including its scope variants. This is stricter
-than randomly splitting paraphrases of the same clause.
+## Run the RAG API
 
-## Important limitations
+Serve the downloaded adapter with vLLM, then run:
 
-- The content has not been reviewed by banking, legal, compliance, fraud, or
-  information-security professionals.
-- Automated checks validate structure and provenance consistency, not whether a
-  policy would be appropriate for a real institution.
-- Template-generated diversity is not a substitute for expert-authored cases.
-- Keep a separate human-written evaluation set for final model claims.
-- Never mix real customer information into this public synthetic package.
+```bash
+python -m venv .venv
+source .venv/bin/activate
+pip install -e .
+cp .env.example .env
+uvicorn takasecure_rag.main:app --host 0.0.0.0 --port 8080
+```
 
-Before production use, replace the fictional catalog with versioned,
-access-controlled, institution-approved documents in RAG and have domain
-experts review training behavior and evaluation scenarios.
+Open http://localhost:8080 for the policy console. FastAPI documentation is
+available at http://localhost:8080/docs.
+
+See `docs/RAG_SYSTEM.md` for vLLM, Upstash, retrieval, and API instructions.
+
+## Dataset split
+
+- Training: 5,600 examples
+- Validation: 700 examples
+- Test: 700 examples
+
+Policy families are isolated across splits. A policy family appearing in
+training does not appear in validation or test, including scope variants.
+
+## Limitations
+
+- All policies, cases, institutions, identifiers, and operational rules are synthetic.
+- The corpus has not been reviewed by banking, legal, compliance, fraud, or security professionals.
+- Automated checks validate structure and provenance consistency, not real-world policy suitability.
+- The project must not be represented as Bangladesh Bank guidance or used for real banking decisions.
+- Production deployment would require institution-approved documents, access controls, privacy controls, and domain-expert review.

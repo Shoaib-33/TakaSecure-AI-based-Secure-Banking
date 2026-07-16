@@ -1,0 +1,3211 @@
+{
+  "document_id": "TSB-CORPUS-RAG-004",
+  "title": "TakaSecure Enterprise Banking Policy Corpus v4",
+  "version": "4.0",
+  "synthetic_only": true,
+  "authoritative_regulations": false,
+  "sha256": "7779ac9963df0019249f67fea2c5d066eb1109c7ad983f5440934790c63f0f21",
+  "page_count": 176,
+  "current_policy_count": 72,
+  "legacy_policy_count": 12,
+  "adversarial_attachment_count": 6,
+  "benchmark_count": 166,
+  "page_text_sha256": [
+    "ad53040b040b266cd8d908aa20a7079fd86ab1b2e6e0cce7f2fdea0b17a82797",
+    "3408f16f229663aa05d82417d2e8558833dd78de7223886a6076dfb5e7d23959",
+    "b73a31fc28236aaf18d0fe3ff06e69338c9048a0f77afa6e7c7dc68639f7a9a4",
+    "6ac3e2d98cf95d08e557a27b4f692c6310a8fd6eeb88e54d8553426d76372ad5",
+    "8ff2226730de7c5ff19ca145288a3b39406f514e34c9c1cad738527421c050a9",
+    "142c840121112e528d54328ee3d0395bde082f5abe39df4a3192864a60dce571",
+    "67d28249f2a1afe2a6964b4ef43a7d301c8e496df5f883e3b82d9c7b03b0190c",
+    "2de071c66f8a161052552e6f2094243355a4a2df9d29e2f7138410bd46e584ad",
+    "8eaca71187ef28a1f1728abcbe4bc81905b85fbe6092c0fdd5da59e454aef7c6",
+    "380bb7145c63c8afb977be40e55325e36097a201d78cb79206f0ca9dec59dded",
+    "8c8757ff5a538407bb6c709496f991b94f1fbb29a98288e504e8fe8acbba3de5",
+    "f463acf8a86ecfd1ec24b4edc8d10b3fc5f55764bad7125389f3da87692224c1",
+    "7d33927588ccafbb8543f61915c45a2e96c3bf6f47a9b005830d5f7c0867175a",
+    "4ae6c84e3b3fc53953d12dfc6bae62fdabaf9abb10d67e91c91b472547e10905",
+    "6d9e73da3ae82e66b6df2c97b91475b0c14d6011a3dc08872d2b33e4186a1973",
+    "0f668fb4e26c77f7ea9be2fc56286c4e5cd652c6af86c6622cb268f86a4b1054",
+    "9d805b08c96883e93cf8718a7addf5077b30af6aeb1c70f1c41b108136b09f46",
+    "1cdded7f23959a6fe9350df7e4185231e86d74f562e148eb79063a100d831115",
+    "7098d2f031e07543b55d53d591bb998b0ef2c111e959ebf2227e653da0efe763",
+    "697e5549cf18a6c52ed09672b1adb5ee8b671b914fb268798c68ecf93e275dab",
+    "8efb616332c3bad11d2f239684986c0d379b7a973e2fc172ebb462b6d56c5c32",
+    "d0e1777d0ba880a5b36b86ff69d4c68b036c230e920a1742589e45117cb27de3",
+    "ce62320fc4674b6d4bd6d7b933baa475f025ba6f295f3cf0a22c70e207eb5d36",
+    "91281f345d66ad1297a5f30aa99198fb12fabf9fbfc1581a8460ea5051ecfe00",
+    "e0c6ddf4d39af9db5e77fb901ece6cc314c78069173682dc5937614735fc950c",
+    "a51b142e3db4ecc0b6b6d5f0024adf4f97d944f93e400475f0835f516e35fdfd",
+    "93951084eb6473fee26d823d2ee8c6980bc81d15e27a92ca2298501e2460dd4d",
+    "4370bc14f5f1baac821964cd792bd5ce0f90a59a9f1a54b074dcba22be038308",
+    "3d7066bd3ead79cb2d16763ca9654edac02e4afd495a928d0b380d02be96c33c",
+    "dd46d50e2ce300f02ac51ae222f3b1e2d366777712c45d246a52c1b3e266dc2d",
+    "08616f948fce84b104b581ec86977df36dcfa3b1c342aa8b6ee31511f75be23e",
+    "c88f0339374bcad11d8c2a75b58a27fe4082e48365c0c4ff4b14fc1e15f6934b",
+    "29a1593250617489481538ecb5dd45026f0f6ff0ed85b19579c13c9bc089d67a",
+    "878da80242720e6a809de8ba794fdcb5bcd42af0789238f75d2be467956ccae8",
+    "1fab68fc1e8653e3f2c189d9d581dbae108b529bb90e279f45790d16d7a46d24",
+    "a8782bdf5c3199114b46a8f230604188e69ccb4efe0f11aee8111d28e475d223",
+    "b3a23afd9b85e14d782039953b1b4673471ef52adcdecd4f2880e8aec55d4351",
+    "0e85fe72cb235a2c030be4718ead02076a7a42594b2a0c85f776123ba49e9479",
+    "871a91b1fd06940bf41fb299b56d2d13c9f48e2a02ff9d8d933a87caf78ecee6",
+    "57a01593fe55770469028bf71ef50f7b9d45cfe695919a73171b2586612e1df9",
+    "cfe6744f5c323bcfe90c9e1b63f9abcfede7f0735cf7ff76d8ce34cdab5aaf80",
+    "6a372b72452499011e41098e099dcfa0e0d481c59e8e948f2a6e5cc29cf81497",
+    "279d9b212b8f7a1169099ae6276f5062ed283028bf915afbbe3aa93359fd1cb3",
+    "cf986c3ccd1806efdb0f95f6560cd648bf662fbdd7ed50c41bfd7fd7ca6b4fac",
+    "ea36c1f2d1d492ffceb79728e610f8baa7b096b38aea2711a7b93150090fd0a1",
+    "b47c6f5ac602819be90d4912e4df5dfbe73c015fa48f7d6adda59cd7d1e62779",
+    "bff05ac6242f59043a77f2948c911fdb5bed901d5e97bfc3155a83f56c161efd",
+    "b6428d4418fd43d357bfc81364043acb43c312ff1bfde26646c169a56b7e0776",
+    "8b9c6fddc54d3de7010f71fa9bd5e1e2367ca285c077cba7e74da9e199c36375",
+    "44758530351d2c56f21c09989de7ee1ca3bd70d416682daf2dcc983ca1acd4e3",
+    "032bf248792d44c7c2b934271d6666f60f318d305b55997b15a3c10c8f37733e",
+    "d7b618aeac5c9d976c24751726627405a4012b53cfcd9fef3dc43b4371c3b069",
+    "58715123c26fb2b76943145ebc13564a89005ba23d1b134758a208e3cae66adb",
+    "4e482c414995393488523e6063aa599efb8923a1d296931e23c352350c8460d6",
+    "b72a14e42eeee2813cc006b7d40a2b9111821470267e50d961f4760144ffb633",
+    "367202ea875889bce3927b5cccfee4004177408fa453bc79e23777743647e5bc",
+    "6e5a4690dfb6e3be5d4f56afb364b0ab6a9add1c7f469c27abf7317f0ec6522d",
+    "e04d4414d1139d2ad844d7e7729127c0b48182b11d3d7e6ce521079d9f48eeaf",
+    "5197f6efff2ef1a1d316f1cb8fdd9aac8a85349a7ad3fcf7ce4e735af07f0ae1",
+    "382d4570bd61bc2be0acb8e10472e3a703a82851f38075880c01b76b524b4880",
+    "00f3a9f199e24ad5efcdd9c46045a871bbd64b37fb57643d0a43ba6358ba4051",
+    "3987feb6d4a7901528d7cb759bfd6063568ee904840342d89802f8cd3356898f",
+    "654daf9034affa8c13e644e497b2fae361382c87d77d7fd6fd71e3724066a542",
+    "fb6697e1aaf5ec09f7a166309bcd8db720f6d11da8f85d3ebfc92d37d990e314",
+    "816329c99445208fd4c40a89c62046d857884b4e96fbf5e80cce4659772250d1",
+    "2db7d8245fb988a89d1a0355c528b317a02b243949fca632755fbd3933f41cb2",
+    "125f0b52daa68eda6174ea8b986768367ab241f2a28423fbf50484bccd402e91",
+    "a04be937804f3af4cf63ca3335f664c8e769f338ca3aad1a27c2ddec9ebabd39",
+    "098e5a6059cdf5aa7b859d40a269fa2e509a83ddbc78d148d4aaca18a6a9bde2",
+    "047816ac6cb7461fd5c844f604b3db1a07d0e7b077a7a8dfdd71b96d6a5e97e6",
+    "d9c77429d964fdb68ff4e7acb96e1ba11941c3ea8aeabbcefd172bd0c8d53150",
+    "4bcff1b56c2558f24ac3eed7bfc227adffc0e101aa3fdfb22112b48aa5b0c960",
+    "9a15eb055cd0ad2fc569e3d0199e9b48afb1be55de30d9ab1b75200c705d3932",
+    "fea1beb410feea3235073984d90af8054f64065d7f3e325f885134bb1836935b",
+    "30b8842d59923a94379bf89d59c13eca406fb148959b17eaced134d88caad3a1",
+    "f23ffdc825a4fc280fc2c8820d5eb7d6786c3297e9d204e195f1077d4f1d60bb",
+    "c1e78873749204582ed0319e1a99287fe5e197b8bd8f9814d5dc9587ff8d17d4",
+    "e9fceee99afa31f011970c51332bb8e1f6be3c8ab9dc903c0ce6acade1cc60b7",
+    "cc0cbc60fd5af81191f373510057ca39b99e1ed4190c36ab5ef1a178f02579f6",
+    "ad7461b9f87e3740d007a7838fd4dcbfa3ba14c0a5bf2097674bdd9b79e8e307",
+    "e7f164a27d8140fa0a8008fa17ee0ea3f7cfb1096c7a133d89385cdaeb7fe31c",
+    "d97f661fd10d87a268d4e2d86460c735871b24b4532dfbeac0835038f10dd7cd",
+    "b21028a84e1a0cf21bea2126d02d4227ac4f523e637315feb94a0c005e65d14d",
+    "9ec349a504247e2349908f52b4a0baa7dc519ffc4e270fcf035ad77e0a99d21c",
+    "9386c55165061fabc6d42a078d89bb4c10c2685c6f6fe609e48251957f2b25ca",
+    "642e4bcec1f597b829fce7a60fd61c4cb2daae805048d2816c56f1d9d812abb4",
+    "671921090f9e05dfe354f30b2ad9f5f9f3eb289318a660e673241a1864c37d77",
+    "452a0d396018ce97cef9b496668bd114b94decc5a1736c574bbb4a0070639df9",
+    "9a61d65c29ef2f9c8c30f18f9e9f95ae8410e264a9337d68a308c11379c6ecaf",
+    "c53e39571fc73f2e9d762c6eaaa986407256b3de59dc08eb91ea0945f1afd545",
+    "5f999d26c36df0005cd9176473c8bd4a68dc6c982c3311910234fc371744c490",
+    "12ba083eba81ee298c0fcca149dd0201c312dc2df91b1fb87976af242f889c05",
+    "2666094f764b181917fd330d3476eb9ac8f4d183e5345be342760362ed1a42b9",
+    "898d173b768f651979e15a1f5926ed84df4dfced1fe6612e5d0e0571827a0731",
+    "0cf5f1c2959dc8b82bf4362e4d5c0fe39c6f9a89da4556e0f0fac7556b28d0fc",
+    "414f831122cd751dbfd846f954f537b3b3984851a2e6a4e25804825f9db443ef",
+    "0f2498883c415b1dc95db443bed7ce84145d86356009b037dd551d3c790dcf17",
+    "f4872e5c97a6ee0e8b65e9381cb74f3d5bb4ecab25d939830b4df1062e3f5caa",
+    "8048cfb4898d23293c17c480bf28024b16e790bced25e15dc573a266272d7ce0",
+    "5266c4d1445a5c2c811e28879bfa6283201cbd85c04797745bcd5d15cef4b440",
+    "f6296aee05b95c9cb56e49c3b0641514a00f94ff066ac4bce4dbe4afb908e89b",
+    "90f9741d8c44e5b3b13c3c91d076d9c5f9a7826d2d5ecf4a5569fff823935924",
+    "bb8ee7fa638288e5bfc7d13188c3a8547e99ef52b2e62626f647363a40223fdf",
+    "246f5405ae1ab060c612a87bf7865a9f4b8c9367630e2fe2e0a93a4dba3a18b9",
+    "48471de98d320f57f9b1a1cc9d1ef0afc21e1d7addf598e487753d19327a8fed",
+    "6be61700defdd0d5e821fd0b9b9bd33ab11a6b88484ae98786c80f4766996dff",
+    "a9794c8022396056b9ca8ff126e8c1001f22c95563807d9b7b8b9696b2e201b7",
+    "a444d8b20b2b627fd511e4fea9a85734331c4461c454c4313d1e327c3c8b8208",
+    "f0b320569dddd55e3d3e7ac66653b9aa10ec752e7b3632ecdfdade9117bffcc5",
+    "facf1e7face09e1882cf2771961043ad9f88a2ec25e2411077e2434c4c8b35d2",
+    "e2f81d40be12783aa381c35c6616d039310e50c660f27c15f60bf8c29c430b77",
+    "c93ffe8df3f6cf929ab69b1c0005c770f49046175166353450338d47ffd6c469",
+    "abf0f311793a22333e02bbbea63334fd93ab8fce78b5f2af7e9b6396867eec8e",
+    "cb36c954daa16fdd93db01672e409043cf9228c49ceafb7a29d1a8b8e6f994ed",
+    "f12839abdfd617acb67b8cd8775d6e2620814ae0da243be9c0385289389eb144",
+    "de06bdc883ef6f52bb67d6314dfcc88050a18c9b2cfb0e33574185e69f8a84a1",
+    "3440b3491a01bff49758069d8365b2200e237affded013da41cf1ce159ae6564",
+    "24ea6d37db9f5b968f50df20de8942e19238c25bbd278924b8f8d07fd6d00303",
+    "d1c1c574bc8d97928819f4274b47a8887142c893ddac3974efa688e3d3dfc5e2",
+    "fcec3e2a4a24ac968b39e5ed4b6d48640e41b48bd30c596fdd7e895a3577bd5a",
+    "624735ecda1f8f666dee69c1931f51d3e8aaeeca2b72e2258225743185d9e69a",
+    "4ac34c894af36cd7446be9a80909da48725d121161aa50e2fc975d213716bb7c",
+    "54ad738a803f4cc8226a183ae4a93b6d7c21851a612849c41c37756970366034",
+    "49e0520a41ad8239977026e064579d629214ebcf98b18bdb505f2fb09db7678a",
+    "21437748a7ba41f7ae0d1363d9229452a74dee9bd8900f4c13bdca163e9c52fd",
+    "25ee759b8b7d09d9a0683b1278dc64ff3018cbe1d20472d2b18677afc7ae85f3",
+    "a92fb494e453bb1c54384712e722c5176ababf5c2781dc6156591faaa75bdfca",
+    "6b1eb2a184db1a4e18417ffd0a8c4255bb868f45a849e0d8a795efb2f4a3b384",
+    "36c3ba4d50c7303a33c66a7bf5d74d9335cbcec1a8d1308750e2837fc5e22623",
+    "ca0db86ce8b40bcc8045ea44b180ae65afa5ed882d4b92afacdd4f199afe7510",
+    "7a713581f503cbf1ad9cb0a85f011b7977e94e966397e1dfb206e08024c32e1b",
+    "81d97c16da9914f4582b4d4a8a112c23b029ddac00388f147b5310847490c3d1",
+    "902f4e432a9eff1086e7af47b06ac17a69e19aa222d78769372d4c7641fb3950",
+    "1597465f49401cb9d5907b8096640f6b5a3da065a43ed4d5dc295db885ac70ae",
+    "95a5cdee0f3220129693fbd2cbaf890345721ac624fff2a1009beb4a351b614d",
+    "ee7b83a95d8d9a9e9f42d76dcf0f89cc4eed786be0ec6e253d43b662f98673d6",
+    "8a95b1fbccf334b712366558a29cd67e5f57437a37fd37c8c4f41114b85fe71b",
+    "e6fb03f3e42625468048b08e79732214b15b09fc303d08f0d588a39940b21bde",
+    "1dc112b881f4c08785b7aee6973e1020b34e4e2d06c430bfbba8688cb7d976ab",
+    "3797281f56e5c69f866c91cd2a2aab3760ef4302018d33a2efdeb789c117ffa7",
+    "102779df58b252059978c71ebdcfe8d2c7c2c1847307b97bb8f512a54f2a2e74",
+    "a855f2f3b8df10eb9bab967f830c3acbe784d508bfe837e137ac62582b106a61",
+    "ff49ae47b1e411d7a7d7f0b9bbb5abdef264b6b19b9d2ac589e623504d96932a",
+    "83bd86259d480fd9d71b4b879cf908b17cbf8a13849cf0a82b0cc4235cf41ecb",
+    "bc02c4d3ba60758917948ad81956982690afd74981bc9b027390cf2bc25778c6",
+    "9b4ffecff5c5ac729d8523405882959f8fce878b395d6a2e1971276198ac524f",
+    "f838b6a3bb2c3ccacd9c3af7af19c06c4cf85c0313ac237fdf6eb08c3db61e1e",
+    "772c63777d1f7c01ab7caad6b5aebe8dd70e2ad69fdab6d3b72b87155a7bd09d",
+    "f965c75ac206cdca1090fcef8fed34ab360f2c1fc4e41271097d80acbb8698c8",
+    "a08078540921bd3de82efd44e70e6566bd511f805cc218e2eda97faa036b2679",
+    "dd3e486ba3638807b6736bec2aaa106427bc88471385a96a788e69b0922c1b4d",
+    "8a05923ef545c382170d614e9883409a26ffa8a2030c5edd45e3f54ae715be62",
+    "af019777019c5353f09c7e7dd2b9f0a2a896b35b0acd68e39b69c45094355fe7",
+    "d51e0e2682c0d775a14bc0e6ae4e4f6f0c51b90e0469385bcabdbb03d6d36e35",
+    "449e3268ed91079d720966255584ef0f2d6b8b41ab3d17d3957ea156843ddc0f",
+    "f790ac595a9e6a94340d72312c9b8ab00c122752cd8987a6e464a40f30164a12",
+    "1cbdafde08db6e83f45eb76531535d5db32f47543f4f139872e8b073ecd55175",
+    "0f8fbc466b1e55d79c120dd4adf907bf46bca629c4f10c2a0156f962d8697483",
+    "f2094effc43a6cf641d8af02ac76b65d403a12afffc363e572e532e00e175a77",
+    "32e451ee8ec576db5bf3bea9f2089f5b28cfd16bc60bc6ca7fdb2997355d2944",
+    "dcc5c0105b5a85e5eabb8ecf6ac34394feec328dd891e1a03ab986a26fffd269",
+    "f0763bc30dd4846a47131ee011eaf1c7675ce4898fa8ceb4cd4c8186ae5c258e",
+    "30fd3d3fd992d787a3bf57382d26bb58b25942aa553571ebbb6b7f993815d26e",
+    "0e01042eb988029b70a3dae90639003fad2339b4cc4ef946539fc5d445ac3cb7",
+    "6015745ad344adf1e900911ca9b9e68b3370a010317ff841acd8d8457559ba3a",
+    "df1b288bebbc1df11bdbd70f61e8590171543c6e32bede07792aba5a13c9cdb6",
+    "a4fb05373ef0f6db287ae42819b3865c1fe5ba578736216ed89358631e346d55",
+    "2bd77cec64d054599089e6f52654f8db8042533dab09f09639ea1d6d097e15b8",
+    "96a0a87443d306f315e5e013032c4200045d3640e9b4b002ced192c34635ca81",
+    "dac4f5be2e6ef046960e6de020a395e2f0c0d204c12476c76aa5068cc02b9e63",
+    "3ca7ebaa0142e4909a46254c9fcc338eb4265b08b6cbe0d4ac000ad422d02f7e",
+    "4a57ba10f147718472ffc2c7f38bf6c47982f53d7d944ca3a00efe58d0f4b9b4",
+    "d5df5b7e33ac30adc25705c628f815eb7f8ee2dec88c8d278fe8b23d63cb31be",
+    "665bdafe5085183a51f3c0f4a10655bdb27d22ec36cfb72431f719af231985bb",
+    "f626ec68fb905b9c239772cb81ce02f142ca1a3f82c153eb0088d81b059aab06",
+    "a33915726b08da4f926e6d79ecfa48e96bcb70151df10c2b403ac1dcc3b1ac34"
+  ],
+  "records": [
+    {
+      "record_type": "current_policy",
+      "policy_id": "TSB-COMPLIANCE-01-1",
+      "document_id": "TSB-DOC-COMPLIANCE-01",
+      "title": "Beneficial ownership verification",
+      "scope": "individual customer relationships",
+      "department": "compliance",
+      "version": "2.0",
+      "status": "current",
+      "effective_from": "2026-01-01",
+      "effective_to": null,
+      "classification": "internal_confidential",
+      "allowed_roles": [
+        "compliance_analyst",
+        "compliance_manager",
+        "mlro",
+        "internal_auditor"
+      ],
+      "approved_tool": null,
+      "authority": true,
+      "pages": [
+        9,
+        10
+      ],
+      "section_chunks": [
+        "control_objective",
+        "mandatory_requirement",
+        "trigger_applicability",
+        "minimum_evidence",
+        "decision_table",
+        "procedure",
+        "responsibility",
+        "exception_failure",
+        "worked_case",
+        "cross_references"
+      ]
+    },
+    {
+      "record_type": "current_policy",
+      "policy_id": "TSB-COMPLIANCE-01-2",
+      "document_id": "TSB-DOC-COMPLIANCE-01",
+      "title": "Beneficial ownership verification",
+      "scope": "business customer relationships",
+      "department": "compliance",
+      "version": "2.0",
+      "status": "current",
+      "effective_from": "2026-01-01",
+      "effective_to": null,
+      "classification": "internal_confidential",
+      "allowed_roles": [
+        "compliance_analyst",
+        "compliance_manager",
+        "mlro",
+        "internal_auditor"
+      ],
+      "approved_tool": null,
+      "authority": true,
+      "pages": [
+        11,
+        12
+      ],
+      "section_chunks": [
+        "control_objective",
+        "mandatory_requirement",
+        "trigger_applicability",
+        "minimum_evidence",
+        "decision_table",
+        "procedure",
+        "responsibility",
+        "exception_failure",
+        "worked_case",
+        "cross_references"
+      ]
+    },
+    {
+      "record_type": "current_policy",
+      "policy_id": "TSB-COMPLIANCE-02-1",
+      "document_id": "TSB-DOC-COMPLIANCE-02",
+      "title": "Enhanced review for high-risk relationships",
+      "scope": "individual customer relationships",
+      "department": "compliance",
+      "version": "2.0",
+      "status": "current",
+      "effective_from": "2026-02-01",
+      "effective_to": null,
+      "classification": "internal_confidential",
+      "allowed_roles": [
+        "compliance_analyst",
+        "compliance_manager",
+        "mlro",
+        "internal_auditor"
+      ],
+      "approved_tool": null,
+      "authority": true,
+      "pages": [
+        13,
+        14
+      ],
+      "section_chunks": [
+        "control_objective",
+        "mandatory_requirement",
+        "trigger_applicability",
+        "minimum_evidence",
+        "decision_table",
+        "procedure",
+        "responsibility",
+        "exception_failure",
+        "worked_case",
+        "cross_references"
+      ]
+    },
+    {
+      "record_type": "current_policy",
+      "policy_id": "TSB-COMPLIANCE-02-2",
+      "document_id": "TSB-DOC-COMPLIANCE-02",
+      "title": "Enhanced review for high-risk relationships",
+      "scope": "business customer relationships",
+      "department": "compliance",
+      "version": "2.0",
+      "status": "current",
+      "effective_from": "2026-02-01",
+      "effective_to": null,
+      "classification": "internal_confidential",
+      "allowed_roles": [
+        "compliance_analyst",
+        "compliance_manager",
+        "mlro",
+        "internal_auditor"
+      ],
+      "approved_tool": null,
+      "authority": true,
+      "pages": [
+        15,
+        16
+      ],
+      "section_chunks": [
+        "control_objective",
+        "mandatory_requirement",
+        "trigger_applicability",
+        "minimum_evidence",
+        "decision_table",
+        "procedure",
+        "responsibility",
+        "exception_failure",
+        "worked_case",
+        "cross_references"
+      ]
+    },
+    {
+      "record_type": "current_policy",
+      "policy_id": "TSB-COMPLIANCE-03-1",
+      "document_id": "TSB-DOC-COMPLIANCE-03",
+      "title": "Sanctions screening match",
+      "scope": "individual customer relationships",
+      "department": "compliance",
+      "version": "2.0",
+      "status": "current",
+      "effective_from": "2026-03-01",
+      "effective_to": null,
+      "classification": "internal_confidential",
+      "allowed_roles": [
+        "compliance_analyst",
+        "compliance_manager",
+        "mlro",
+        "internal_auditor"
+      ],
+      "approved_tool": null,
+      "authority": true,
+      "pages": [
+        17,
+        18
+      ],
+      "section_chunks": [
+        "control_objective",
+        "mandatory_requirement",
+        "trigger_applicability",
+        "minimum_evidence",
+        "decision_table",
+        "procedure",
+        "responsibility",
+        "exception_failure",
+        "worked_case",
+        "cross_references"
+      ]
+    },
+    {
+      "record_type": "current_policy",
+      "policy_id": "TSB-COMPLIANCE-03-2",
+      "document_id": "TSB-DOC-COMPLIANCE-03",
+      "title": "Sanctions screening match",
+      "scope": "business customer relationships",
+      "department": "compliance",
+      "version": "2.0",
+      "status": "current",
+      "effective_from": "2026-03-01",
+      "effective_to": null,
+      "classification": "internal_confidential",
+      "allowed_roles": [
+        "compliance_analyst",
+        "compliance_manager",
+        "mlro",
+        "internal_auditor"
+      ],
+      "approved_tool": null,
+      "authority": true,
+      "pages": [
+        19,
+        20
+      ],
+      "section_chunks": [
+        "control_objective",
+        "mandatory_requirement",
+        "trigger_applicability",
+        "minimum_evidence",
+        "decision_table",
+        "procedure",
+        "responsibility",
+        "exception_failure",
+        "worked_case",
+        "cross_references"
+      ]
+    },
+    {
+      "record_type": "current_policy",
+      "policy_id": "TSB-COMPLIANCE-04-1",
+      "document_id": "TSB-DOC-COMPLIANCE-04",
+      "title": "Customer risk reassessment",
+      "scope": "individual customer relationships",
+      "department": "compliance",
+      "version": "2.0",
+      "status": "current",
+      "effective_from": "2026-04-01",
+      "effective_to": null,
+      "classification": "internal_confidential",
+      "allowed_roles": [
+        "compliance_analyst",
+        "compliance_manager",
+        "mlro",
+        "internal_auditor"
+      ],
+      "approved_tool": null,
+      "authority": true,
+      "pages": [
+        21,
+        22
+      ],
+      "section_chunks": [
+        "control_objective",
+        "mandatory_requirement",
+        "trigger_applicability",
+        "minimum_evidence",
+        "decision_table",
+        "procedure",
+        "responsibility",
+        "exception_failure",
+        "worked_case",
+        "cross_references"
+      ]
+    },
+    {
+      "record_type": "current_policy",
+      "policy_id": "TSB-COMPLIANCE-04-2",
+      "document_id": "TSB-DOC-COMPLIANCE-04",
+      "title": "Customer risk reassessment",
+      "scope": "business customer relationships",
+      "department": "compliance",
+      "version": "2.0",
+      "status": "current",
+      "effective_from": "2026-04-01",
+      "effective_to": null,
+      "classification": "internal_confidential",
+      "allowed_roles": [
+        "compliance_analyst",
+        "compliance_manager",
+        "mlro",
+        "internal_auditor"
+      ],
+      "approved_tool": null,
+      "authority": true,
+      "pages": [
+        23,
+        24
+      ],
+      "section_chunks": [
+        "control_objective",
+        "mandatory_requirement",
+        "trigger_applicability",
+        "minimum_evidence",
+        "decision_table",
+        "procedure",
+        "responsibility",
+        "exception_failure",
+        "worked_case",
+        "cross_references"
+      ]
+    },
+    {
+      "record_type": "current_policy",
+      "policy_id": "TSB-COMPLIANCE-05-1",
+      "document_id": "TSB-DOC-COMPLIANCE-05",
+      "title": "Compliance record retention",
+      "scope": "individual customer relationships",
+      "department": "compliance",
+      "version": "2.0",
+      "status": "current",
+      "effective_from": "2026-05-01",
+      "effective_to": null,
+      "classification": "internal_confidential",
+      "allowed_roles": [
+        "compliance_analyst",
+        "compliance_manager",
+        "mlro",
+        "internal_auditor"
+      ],
+      "approved_tool": null,
+      "authority": true,
+      "pages": [
+        25,
+        26
+      ],
+      "section_chunks": [
+        "control_objective",
+        "mandatory_requirement",
+        "trigger_applicability",
+        "minimum_evidence",
+        "decision_table",
+        "procedure",
+        "responsibility",
+        "exception_failure",
+        "worked_case",
+        "cross_references"
+      ]
+    },
+    {
+      "record_type": "current_policy",
+      "policy_id": "TSB-COMPLIANCE-05-2",
+      "document_id": "TSB-DOC-COMPLIANCE-05",
+      "title": "Compliance record retention",
+      "scope": "business customer relationships",
+      "department": "compliance",
+      "version": "2.0",
+      "status": "current",
+      "effective_from": "2026-05-01",
+      "effective_to": null,
+      "classification": "internal_confidential",
+      "allowed_roles": [
+        "compliance_analyst",
+        "compliance_manager",
+        "mlro",
+        "internal_auditor"
+      ],
+      "approved_tool": null,
+      "authority": true,
+      "pages": [
+        27,
+        28
+      ],
+      "section_chunks": [
+        "control_objective",
+        "mandatory_requirement",
+        "trigger_applicability",
+        "minimum_evidence",
+        "decision_table",
+        "procedure",
+        "responsibility",
+        "exception_failure",
+        "worked_case",
+        "cross_references"
+      ]
+    },
+    {
+      "record_type": "current_policy",
+      "policy_id": "TSB-COMPLIANCE-06-1",
+      "document_id": "TSB-DOC-COMPLIANCE-06",
+      "title": "Suspicious activity escalation",
+      "scope": "individual customer relationships",
+      "department": "compliance",
+      "version": "2.0",
+      "status": "current",
+      "effective_from": "2026-06-01",
+      "effective_to": null,
+      "classification": "internal_confidential",
+      "allowed_roles": [
+        "compliance_analyst",
+        "compliance_manager",
+        "mlro",
+        "internal_auditor"
+      ],
+      "approved_tool": null,
+      "authority": true,
+      "pages": [
+        29,
+        30
+      ],
+      "section_chunks": [
+        "control_objective",
+        "mandatory_requirement",
+        "trigger_applicability",
+        "minimum_evidence",
+        "decision_table",
+        "procedure",
+        "responsibility",
+        "exception_failure",
+        "worked_case",
+        "cross_references"
+      ]
+    },
+    {
+      "record_type": "current_policy",
+      "policy_id": "TSB-COMPLIANCE-06-2",
+      "document_id": "TSB-DOC-COMPLIANCE-06",
+      "title": "Suspicious activity escalation",
+      "scope": "business customer relationships",
+      "department": "compliance",
+      "version": "2.0",
+      "status": "current",
+      "effective_from": "2026-06-01",
+      "effective_to": null,
+      "classification": "internal_confidential",
+      "allowed_roles": [
+        "compliance_analyst",
+        "compliance_manager",
+        "mlro",
+        "internal_auditor"
+      ],
+      "approved_tool": null,
+      "authority": true,
+      "pages": [
+        31,
+        32
+      ],
+      "section_chunks": [
+        "control_objective",
+        "mandatory_requirement",
+        "trigger_applicability",
+        "minimum_evidence",
+        "decision_table",
+        "procedure",
+        "responsibility",
+        "exception_failure",
+        "worked_case",
+        "cross_references"
+      ]
+    },
+    {
+      "record_type": "current_policy",
+      "policy_id": "TSB-CREDIT-01-1",
+      "document_id": "TSB-DOC-CREDIT-01",
+      "title": "Income evidence freshness",
+      "scope": "retail lending",
+      "department": "credit",
+      "version": "2.0",
+      "status": "current",
+      "effective_from": "2026-01-01",
+      "effective_to": null,
+      "classification": "internal_confidential",
+      "allowed_roles": [
+        "credit_analyst",
+        "credit_manager",
+        "risk_manager",
+        "internal_auditor"
+      ],
+      "approved_tool": "calculate_document_age",
+      "authority": true,
+      "pages": [
+        33,
+        34
+      ],
+      "section_chunks": [
+        "control_objective",
+        "mandatory_requirement",
+        "trigger_applicability",
+        "minimum_evidence",
+        "decision_table",
+        "procedure",
+        "responsibility",
+        "exception_failure",
+        "worked_case",
+        "cross_references"
+      ]
+    },
+    {
+      "record_type": "current_policy",
+      "policy_id": "TSB-CREDIT-01-2",
+      "document_id": "TSB-DOC-CREDIT-01",
+      "title": "Income evidence freshness",
+      "scope": "SME lending",
+      "department": "credit",
+      "version": "2.0",
+      "status": "current",
+      "effective_from": "2026-01-01",
+      "effective_to": null,
+      "classification": "internal_confidential",
+      "allowed_roles": [
+        "credit_analyst",
+        "credit_manager",
+        "risk_manager",
+        "internal_auditor"
+      ],
+      "approved_tool": "calculate_document_age",
+      "authority": true,
+      "pages": [
+        35,
+        36
+      ],
+      "section_chunks": [
+        "control_objective",
+        "mandatory_requirement",
+        "trigger_applicability",
+        "minimum_evidence",
+        "decision_table",
+        "procedure",
+        "responsibility",
+        "exception_failure",
+        "worked_case",
+        "cross_references"
+      ]
+    },
+    {
+      "record_type": "current_policy",
+      "policy_id": "TSB-CREDIT-02-1",
+      "document_id": "TSB-DOC-CREDIT-02",
+      "title": "Independent collateral valuation",
+      "scope": "retail lending",
+      "department": "credit",
+      "version": "2.0",
+      "status": "current",
+      "effective_from": "2026-02-01",
+      "effective_to": null,
+      "classification": "internal_confidential",
+      "allowed_roles": [
+        "credit_analyst",
+        "credit_manager",
+        "risk_manager",
+        "internal_auditor"
+      ],
+      "approved_tool": "calculate_document_age",
+      "authority": true,
+      "pages": [
+        37,
+        38
+      ],
+      "section_chunks": [
+        "control_objective",
+        "mandatory_requirement",
+        "trigger_applicability",
+        "minimum_evidence",
+        "decision_table",
+        "procedure",
+        "responsibility",
+        "exception_failure",
+        "worked_case",
+        "cross_references"
+      ]
+    },
+    {
+      "record_type": "current_policy",
+      "policy_id": "TSB-CREDIT-02-2",
+      "document_id": "TSB-DOC-CREDIT-02",
+      "title": "Independent collateral valuation",
+      "scope": "SME lending",
+      "department": "credit",
+      "version": "2.0",
+      "status": "current",
+      "effective_from": "2026-02-01",
+      "effective_to": null,
+      "classification": "internal_confidential",
+      "allowed_roles": [
+        "credit_analyst",
+        "credit_manager",
+        "risk_manager",
+        "internal_auditor"
+      ],
+      "approved_tool": "calculate_document_age",
+      "authority": true,
+      "pages": [
+        39,
+        40
+      ],
+      "section_chunks": [
+        "control_objective",
+        "mandatory_requirement",
+        "trigger_applicability",
+        "minimum_evidence",
+        "decision_table",
+        "procedure",
+        "responsibility",
+        "exception_failure",
+        "worked_case",
+        "cross_references"
+      ]
+    },
+    {
+      "record_type": "current_policy",
+      "policy_id": "TSB-CREDIT-03-1",
+      "document_id": "TSB-DOC-CREDIT-03",
+      "title": "Debt-to-income control",
+      "scope": "retail lending",
+      "department": "credit",
+      "version": "2.0",
+      "status": "current",
+      "effective_from": "2026-03-01",
+      "effective_to": null,
+      "classification": "internal_confidential",
+      "allowed_roles": [
+        "credit_analyst",
+        "credit_manager",
+        "risk_manager",
+        "internal_auditor"
+      ],
+      "approved_tool": "calculate_dti",
+      "authority": true,
+      "pages": [
+        41,
+        42
+      ],
+      "section_chunks": [
+        "control_objective",
+        "mandatory_requirement",
+        "trigger_applicability",
+        "minimum_evidence",
+        "decision_table",
+        "procedure",
+        "responsibility",
+        "exception_failure",
+        "worked_case",
+        "cross_references"
+      ]
+    },
+    {
+      "record_type": "current_policy",
+      "policy_id": "TSB-CREDIT-03-2",
+      "document_id": "TSB-DOC-CREDIT-03",
+      "title": "Debt-to-income control",
+      "scope": "SME lending",
+      "department": "credit",
+      "version": "2.0",
+      "status": "current",
+      "effective_from": "2026-03-01",
+      "effective_to": null,
+      "classification": "internal_confidential",
+      "allowed_roles": [
+        "credit_analyst",
+        "credit_manager",
+        "risk_manager",
+        "internal_auditor"
+      ],
+      "approved_tool": "calculate_dti",
+      "authority": true,
+      "pages": [
+        43,
+        44
+      ],
+      "section_chunks": [
+        "control_objective",
+        "mandatory_requirement",
+        "trigger_applicability",
+        "minimum_evidence",
+        "decision_table",
+        "procedure",
+        "responsibility",
+        "exception_failure",
+        "worked_case",
+        "cross_references"
+      ]
+    },
+    {
+      "record_type": "current_policy",
+      "policy_id": "TSB-CREDIT-04-1",
+      "document_id": "TSB-DOC-CREDIT-04",
+      "title": "Loan-to-value control",
+      "scope": "retail lending",
+      "department": "credit",
+      "version": "2.0",
+      "status": "current",
+      "effective_from": "2026-04-01",
+      "effective_to": null,
+      "classification": "internal_confidential",
+      "allowed_roles": [
+        "credit_analyst",
+        "credit_manager",
+        "risk_manager",
+        "internal_auditor"
+      ],
+      "approved_tool": "calculate_ltv",
+      "authority": true,
+      "pages": [
+        45,
+        46
+      ],
+      "section_chunks": [
+        "control_objective",
+        "mandatory_requirement",
+        "trigger_applicability",
+        "minimum_evidence",
+        "decision_table",
+        "procedure",
+        "responsibility",
+        "exception_failure",
+        "worked_case",
+        "cross_references"
+      ]
+    },
+    {
+      "record_type": "current_policy",
+      "policy_id": "TSB-CREDIT-04-2",
+      "document_id": "TSB-DOC-CREDIT-04",
+      "title": "Loan-to-value control",
+      "scope": "SME lending",
+      "department": "credit",
+      "version": "2.0",
+      "status": "current",
+      "effective_from": "2026-04-01",
+      "effective_to": null,
+      "classification": "internal_confidential",
+      "allowed_roles": [
+        "credit_analyst",
+        "credit_manager",
+        "risk_manager",
+        "internal_auditor"
+      ],
+      "approved_tool": "calculate_ltv",
+      "authority": true,
+      "pages": [
+        47,
+        48
+      ],
+      "section_chunks": [
+        "control_objective",
+        "mandatory_requirement",
+        "trigger_applicability",
+        "minimum_evidence",
+        "decision_table",
+        "procedure",
+        "responsibility",
+        "exception_failure",
+        "worked_case",
+        "cross_references"
+      ]
+    },
+    {
+      "record_type": "current_policy",
+      "policy_id": "TSB-CREDIT-05-1",
+      "document_id": "TSB-DOC-CREDIT-05",
+      "title": "Credit bureau report freshness",
+      "scope": "retail lending",
+      "department": "credit",
+      "version": "2.0",
+      "status": "current",
+      "effective_from": "2026-05-01",
+      "effective_to": null,
+      "classification": "internal_confidential",
+      "allowed_roles": [
+        "credit_analyst",
+        "credit_manager",
+        "risk_manager",
+        "internal_auditor"
+      ],
+      "approved_tool": null,
+      "authority": true,
+      "pages": [
+        49,
+        50
+      ],
+      "section_chunks": [
+        "control_objective",
+        "mandatory_requirement",
+        "trigger_applicability",
+        "minimum_evidence",
+        "decision_table",
+        "procedure",
+        "responsibility",
+        "exception_failure",
+        "worked_case",
+        "cross_references"
+      ]
+    },
+    {
+      "record_type": "current_policy",
+      "policy_id": "TSB-CREDIT-05-2",
+      "document_id": "TSB-DOC-CREDIT-05",
+      "title": "Credit bureau report freshness",
+      "scope": "SME lending",
+      "department": "credit",
+      "version": "2.0",
+      "status": "current",
+      "effective_from": "2026-05-01",
+      "effective_to": null,
+      "classification": "internal_confidential",
+      "allowed_roles": [
+        "credit_analyst",
+        "credit_manager",
+        "risk_manager",
+        "internal_auditor"
+      ],
+      "approved_tool": null,
+      "authority": true,
+      "pages": [
+        51,
+        52
+      ],
+      "section_chunks": [
+        "control_objective",
+        "mandatory_requirement",
+        "trigger_applicability",
+        "minimum_evidence",
+        "decision_table",
+        "procedure",
+        "responsibility",
+        "exception_failure",
+        "worked_case",
+        "cross_references"
+      ]
+    },
+    {
+      "record_type": "current_policy",
+      "policy_id": "TSB-CREDIT-06-1",
+      "document_id": "TSB-DOC-CREDIT-06",
+      "title": "Credit exception approval",
+      "scope": "retail lending",
+      "department": "credit",
+      "version": "2.0",
+      "status": "current",
+      "effective_from": "2026-06-01",
+      "effective_to": null,
+      "classification": "internal_confidential",
+      "allowed_roles": [
+        "credit_analyst",
+        "credit_manager",
+        "risk_manager",
+        "internal_auditor"
+      ],
+      "approved_tool": null,
+      "authority": true,
+      "pages": [
+        53,
+        54
+      ],
+      "section_chunks": [
+        "control_objective",
+        "mandatory_requirement",
+        "trigger_applicability",
+        "minimum_evidence",
+        "decision_table",
+        "procedure",
+        "responsibility",
+        "exception_failure",
+        "worked_case",
+        "cross_references"
+      ]
+    },
+    {
+      "record_type": "current_policy",
+      "policy_id": "TSB-CREDIT-06-2",
+      "document_id": "TSB-DOC-CREDIT-06",
+      "title": "Credit exception approval",
+      "scope": "SME lending",
+      "department": "credit",
+      "version": "2.0",
+      "status": "current",
+      "effective_from": "2026-06-01",
+      "effective_to": null,
+      "classification": "internal_confidential",
+      "allowed_roles": [
+        "credit_analyst",
+        "credit_manager",
+        "risk_manager",
+        "internal_auditor"
+      ],
+      "approved_tool": null,
+      "authority": true,
+      "pages": [
+        55,
+        56
+      ],
+      "section_chunks": [
+        "control_objective",
+        "mandatory_requirement",
+        "trigger_applicability",
+        "minimum_evidence",
+        "decision_table",
+        "procedure",
+        "responsibility",
+        "exception_failure",
+        "worked_case",
+        "cross_references"
+      ]
+    },
+    {
+      "record_type": "current_policy",
+      "policy_id": "TSB-CUSTOMER-SERVICE-01-1",
+      "document_id": "TSB-DOC-CUSTOMER-SERVICE-01",
+      "title": "Lost card response",
+      "scope": "branch-assisted service",
+      "department": "customer_service",
+      "version": "2.0",
+      "status": "current",
+      "effective_from": "2026-01-01",
+      "effective_to": null,
+      "classification": "internal_confidential",
+      "allowed_roles": [
+        "service_agent",
+        "service_manager",
+        "branch_officer",
+        "internal_auditor"
+      ],
+      "approved_tool": null,
+      "authority": true,
+      "pages": [
+        57,
+        58
+      ],
+      "section_chunks": [
+        "control_objective",
+        "mandatory_requirement",
+        "trigger_applicability",
+        "minimum_evidence",
+        "decision_table",
+        "procedure",
+        "responsibility",
+        "exception_failure",
+        "worked_case",
+        "cross_references"
+      ]
+    },
+    {
+      "record_type": "current_policy",
+      "policy_id": "TSB-CUSTOMER-SERVICE-01-2",
+      "document_id": "TSB-DOC-CUSTOMER-SERVICE-01",
+      "title": "Lost card response",
+      "scope": "authenticated digital service",
+      "department": "customer_service",
+      "version": "2.0",
+      "status": "current",
+      "effective_from": "2026-01-01",
+      "effective_to": null,
+      "classification": "internal_confidential",
+      "allowed_roles": [
+        "service_agent",
+        "service_manager",
+        "branch_officer",
+        "internal_auditor"
+      ],
+      "approved_tool": null,
+      "authority": true,
+      "pages": [
+        59,
+        60
+      ],
+      "section_chunks": [
+        "control_objective",
+        "mandatory_requirement",
+        "trigger_applicability",
+        "minimum_evidence",
+        "decision_table",
+        "procedure",
+        "responsibility",
+        "exception_failure",
+        "worked_case",
+        "cross_references"
+      ]
+    },
+    {
+      "record_type": "current_policy",
+      "policy_id": "TSB-CUSTOMER-SERVICE-02-1",
+      "document_id": "TSB-DOC-CUSTOMER-SERVICE-02",
+      "title": "Contact detail change",
+      "scope": "branch-assisted service",
+      "department": "customer_service",
+      "version": "2.0",
+      "status": "current",
+      "effective_from": "2026-02-01",
+      "effective_to": null,
+      "classification": "internal_confidential",
+      "allowed_roles": [
+        "service_agent",
+        "service_manager",
+        "branch_officer",
+        "internal_auditor"
+      ],
+      "approved_tool": null,
+      "authority": true,
+      "pages": [
+        61,
+        62
+      ],
+      "section_chunks": [
+        "control_objective",
+        "mandatory_requirement",
+        "trigger_applicability",
+        "minimum_evidence",
+        "decision_table",
+        "procedure",
+        "responsibility",
+        "exception_failure",
+        "worked_case",
+        "cross_references"
+      ]
+    },
+    {
+      "record_type": "current_policy",
+      "policy_id": "TSB-CUSTOMER-SERVICE-02-2",
+      "document_id": "TSB-DOC-CUSTOMER-SERVICE-02",
+      "title": "Contact detail change",
+      "scope": "authenticated digital service",
+      "department": "customer_service",
+      "version": "2.0",
+      "status": "current",
+      "effective_from": "2026-02-01",
+      "effective_to": null,
+      "classification": "internal_confidential",
+      "allowed_roles": [
+        "service_agent",
+        "service_manager",
+        "branch_officer",
+        "internal_auditor"
+      ],
+      "approved_tool": null,
+      "authority": true,
+      "pages": [
+        63,
+        64
+      ],
+      "section_chunks": [
+        "control_objective",
+        "mandatory_requirement",
+        "trigger_applicability",
+        "minimum_evidence",
+        "decision_table",
+        "procedure",
+        "responsibility",
+        "exception_failure",
+        "worked_case",
+        "cross_references"
+      ]
+    },
+    {
+      "record_type": "current_policy",
+      "policy_id": "TSB-CUSTOMER-SERVICE-03-1",
+      "document_id": "TSB-DOC-CUSTOMER-SERVICE-03",
+      "title": "Dormant account reactivation",
+      "scope": "branch-assisted service",
+      "department": "customer_service",
+      "version": "2.0",
+      "status": "current",
+      "effective_from": "2026-03-01",
+      "effective_to": null,
+      "classification": "internal_confidential",
+      "allowed_roles": [
+        "service_agent",
+        "service_manager",
+        "branch_officer",
+        "internal_auditor"
+      ],
+      "approved_tool": null,
+      "authority": true,
+      "pages": [
+        65,
+        66
+      ],
+      "section_chunks": [
+        "control_objective",
+        "mandatory_requirement",
+        "trigger_applicability",
+        "minimum_evidence",
+        "decision_table",
+        "procedure",
+        "responsibility",
+        "exception_failure",
+        "worked_case",
+        "cross_references"
+      ]
+    },
+    {
+      "record_type": "current_policy",
+      "policy_id": "TSB-CUSTOMER-SERVICE-03-2",
+      "document_id": "TSB-DOC-CUSTOMER-SERVICE-03",
+      "title": "Dormant account reactivation",
+      "scope": "authenticated digital service",
+      "department": "customer_service",
+      "version": "2.0",
+      "status": "current",
+      "effective_from": "2026-03-01",
+      "effective_to": null,
+      "classification": "internal_confidential",
+      "allowed_roles": [
+        "service_agent",
+        "service_manager",
+        "branch_officer",
+        "internal_auditor"
+      ],
+      "approved_tool": null,
+      "authority": true,
+      "pages": [
+        67,
+        68
+      ],
+      "section_chunks": [
+        "control_objective",
+        "mandatory_requirement",
+        "trigger_applicability",
+        "minimum_evidence",
+        "decision_table",
+        "procedure",
+        "responsibility",
+        "exception_failure",
+        "worked_case",
+        "cross_references"
+      ]
+    },
+    {
+      "record_type": "current_policy",
+      "policy_id": "TSB-CUSTOMER-SERVICE-04-1",
+      "document_id": "TSB-DOC-CUSTOMER-SERVICE-04",
+      "title": "Fee dispute handling",
+      "scope": "branch-assisted service",
+      "department": "customer_service",
+      "version": "2.0",
+      "status": "current",
+      "effective_from": "2026-04-01",
+      "effective_to": null,
+      "classification": "internal_confidential",
+      "allowed_roles": [
+        "service_agent",
+        "service_manager",
+        "branch_officer",
+        "internal_auditor"
+      ],
+      "approved_tool": null,
+      "authority": true,
+      "pages": [
+        69,
+        70
+      ],
+      "section_chunks": [
+        "control_objective",
+        "mandatory_requirement",
+        "trigger_applicability",
+        "minimum_evidence",
+        "decision_table",
+        "procedure",
+        "responsibility",
+        "exception_failure",
+        "worked_case",
+        "cross_references"
+      ]
+    },
+    {
+      "record_type": "current_policy",
+      "policy_id": "TSB-CUSTOMER-SERVICE-04-2",
+      "document_id": "TSB-DOC-CUSTOMER-SERVICE-04",
+      "title": "Fee dispute handling",
+      "scope": "authenticated digital service",
+      "department": "customer_service",
+      "version": "2.0",
+      "status": "current",
+      "effective_from": "2026-04-01",
+      "effective_to": null,
+      "classification": "internal_confidential",
+      "allowed_roles": [
+        "service_agent",
+        "service_manager",
+        "branch_officer",
+        "internal_auditor"
+      ],
+      "approved_tool": null,
+      "authority": true,
+      "pages": [
+        71,
+        72
+      ],
+      "section_chunks": [
+        "control_objective",
+        "mandatory_requirement",
+        "trigger_applicability",
+        "minimum_evidence",
+        "decision_table",
+        "procedure",
+        "responsibility",
+        "exception_failure",
+        "worked_case",
+        "cross_references"
+      ]
+    },
+    {
+      "record_type": "current_policy",
+      "policy_id": "TSB-CUSTOMER-SERVICE-05-1",
+      "document_id": "TSB-DOC-CUSTOMER-SERVICE-05",
+      "title": "Nominee change",
+      "scope": "branch-assisted service",
+      "department": "customer_service",
+      "version": "2.0",
+      "status": "current",
+      "effective_from": "2026-05-01",
+      "effective_to": null,
+      "classification": "internal_confidential",
+      "allowed_roles": [
+        "service_agent",
+        "service_manager",
+        "branch_officer",
+        "internal_auditor"
+      ],
+      "approved_tool": null,
+      "authority": true,
+      "pages": [
+        73,
+        74
+      ],
+      "section_chunks": [
+        "control_objective",
+        "mandatory_requirement",
+        "trigger_applicability",
+        "minimum_evidence",
+        "decision_table",
+        "procedure",
+        "responsibility",
+        "exception_failure",
+        "worked_case",
+        "cross_references"
+      ]
+    },
+    {
+      "record_type": "current_policy",
+      "policy_id": "TSB-CUSTOMER-SERVICE-05-2",
+      "document_id": "TSB-DOC-CUSTOMER-SERVICE-05",
+      "title": "Nominee change",
+      "scope": "authenticated digital service",
+      "department": "customer_service",
+      "version": "2.0",
+      "status": "current",
+      "effective_from": "2026-05-01",
+      "effective_to": null,
+      "classification": "internal_confidential",
+      "allowed_roles": [
+        "service_agent",
+        "service_manager",
+        "branch_officer",
+        "internal_auditor"
+      ],
+      "approved_tool": null,
+      "authority": true,
+      "pages": [
+        75,
+        76
+      ],
+      "section_chunks": [
+        "control_objective",
+        "mandatory_requirement",
+        "trigger_applicability",
+        "minimum_evidence",
+        "decision_table",
+        "procedure",
+        "responsibility",
+        "exception_failure",
+        "worked_case",
+        "cross_references"
+      ]
+    },
+    {
+      "record_type": "current_policy",
+      "policy_id": "TSB-CUSTOMER-SERVICE-06-1",
+      "document_id": "TSB-DOC-CUSTOMER-SERVICE-06",
+      "title": "Customer complaint escalation",
+      "scope": "branch-assisted service",
+      "department": "customer_service",
+      "version": "2.0",
+      "status": "current",
+      "effective_from": "2026-06-01",
+      "effective_to": null,
+      "classification": "internal_confidential",
+      "allowed_roles": [
+        "service_agent",
+        "service_manager",
+        "branch_officer",
+        "internal_auditor"
+      ],
+      "approved_tool": null,
+      "authority": true,
+      "pages": [
+        77,
+        78
+      ],
+      "section_chunks": [
+        "control_objective",
+        "mandatory_requirement",
+        "trigger_applicability",
+        "minimum_evidence",
+        "decision_table",
+        "procedure",
+        "responsibility",
+        "exception_failure",
+        "worked_case",
+        "cross_references"
+      ]
+    },
+    {
+      "record_type": "current_policy",
+      "policy_id": "TSB-CUSTOMER-SERVICE-06-2",
+      "document_id": "TSB-DOC-CUSTOMER-SERVICE-06",
+      "title": "Customer complaint escalation",
+      "scope": "authenticated digital service",
+      "department": "customer_service",
+      "version": "2.0",
+      "status": "current",
+      "effective_from": "2026-06-01",
+      "effective_to": null,
+      "classification": "internal_confidential",
+      "allowed_roles": [
+        "service_agent",
+        "service_manager",
+        "branch_officer",
+        "internal_auditor"
+      ],
+      "approved_tool": null,
+      "authority": true,
+      "pages": [
+        79,
+        80
+      ],
+      "section_chunks": [
+        "control_objective",
+        "mandatory_requirement",
+        "trigger_applicability",
+        "minimum_evidence",
+        "decision_table",
+        "procedure",
+        "responsibility",
+        "exception_failure",
+        "worked_case",
+        "cross_references"
+      ]
+    },
+    {
+      "record_type": "current_policy",
+      "policy_id": "TSB-FRAUD-01-1",
+      "document_id": "TSB-DOC-FRAUD-01",
+      "title": "SIM-swap protective hold",
+      "scope": "mobile banking",
+      "department": "fraud",
+      "version": "2.0",
+      "status": "current",
+      "effective_from": "2026-01-01",
+      "effective_to": null,
+      "classification": "internal_confidential",
+      "allowed_roles": [
+        "fraud_analyst",
+        "fraud_manager",
+        "investigator",
+        "internal_auditor"
+      ],
+      "approved_tool": null,
+      "authority": true,
+      "pages": [
+        81,
+        82
+      ],
+      "section_chunks": [
+        "control_objective",
+        "mandatory_requirement",
+        "trigger_applicability",
+        "minimum_evidence",
+        "decision_table",
+        "procedure",
+        "responsibility",
+        "exception_failure",
+        "worked_case",
+        "cross_references"
+      ]
+    },
+    {
+      "record_type": "current_policy",
+      "policy_id": "TSB-FRAUD-01-2",
+      "document_id": "TSB-DOC-FRAUD-01",
+      "title": "SIM-swap protective hold",
+      "scope": "internet banking",
+      "department": "fraud",
+      "version": "2.0",
+      "status": "current",
+      "effective_from": "2026-01-01",
+      "effective_to": null,
+      "classification": "internal_confidential",
+      "allowed_roles": [
+        "fraud_analyst",
+        "fraud_manager",
+        "investigator",
+        "internal_auditor"
+      ],
+      "approved_tool": null,
+      "authority": true,
+      "pages": [
+        83,
+        84
+      ],
+      "section_chunks": [
+        "control_objective",
+        "mandatory_requirement",
+        "trigger_applicability",
+        "minimum_evidence",
+        "decision_table",
+        "procedure",
+        "responsibility",
+        "exception_failure",
+        "worked_case",
+        "cross_references"
+      ]
+    },
+    {
+      "record_type": "current_policy",
+      "policy_id": "TSB-FRAUD-02-1",
+      "document_id": "TSB-DOC-FRAUD-02",
+      "title": "New-beneficiary velocity alert",
+      "scope": "mobile banking",
+      "department": "fraud",
+      "version": "2.0",
+      "status": "current",
+      "effective_from": "2026-02-01",
+      "effective_to": null,
+      "classification": "internal_confidential",
+      "allowed_roles": [
+        "fraud_analyst",
+        "fraud_manager",
+        "investigator",
+        "internal_auditor"
+      ],
+      "approved_tool": null,
+      "authority": true,
+      "pages": [
+        85,
+        86
+      ],
+      "section_chunks": [
+        "control_objective",
+        "mandatory_requirement",
+        "trigger_applicability",
+        "minimum_evidence",
+        "decision_table",
+        "procedure",
+        "responsibility",
+        "exception_failure",
+        "worked_case",
+        "cross_references"
+      ]
+    },
+    {
+      "record_type": "current_policy",
+      "policy_id": "TSB-FRAUD-02-2",
+      "document_id": "TSB-DOC-FRAUD-02",
+      "title": "New-beneficiary velocity alert",
+      "scope": "internet banking",
+      "department": "fraud",
+      "version": "2.0",
+      "status": "current",
+      "effective_from": "2026-02-01",
+      "effective_to": null,
+      "classification": "internal_confidential",
+      "allowed_roles": [
+        "fraud_analyst",
+        "fraud_manager",
+        "investigator",
+        "internal_auditor"
+      ],
+      "approved_tool": null,
+      "authority": true,
+      "pages": [
+        87,
+        88
+      ],
+      "section_chunks": [
+        "control_objective",
+        "mandatory_requirement",
+        "trigger_applicability",
+        "minimum_evidence",
+        "decision_table",
+        "procedure",
+        "responsibility",
+        "exception_failure",
+        "worked_case",
+        "cross_references"
+      ]
+    },
+    {
+      "record_type": "current_policy",
+      "policy_id": "TSB-FRAUD-03-1",
+      "document_id": "TSB-DOC-FRAUD-03",
+      "title": "Account takeover containment",
+      "scope": "mobile banking",
+      "department": "fraud",
+      "version": "2.0",
+      "status": "current",
+      "effective_from": "2026-03-01",
+      "effective_to": null,
+      "classification": "internal_confidential",
+      "allowed_roles": [
+        "fraud_analyst",
+        "fraud_manager",
+        "investigator",
+        "internal_auditor"
+      ],
+      "approved_tool": null,
+      "authority": true,
+      "pages": [
+        89,
+        90
+      ],
+      "section_chunks": [
+        "control_objective",
+        "mandatory_requirement",
+        "trigger_applicability",
+        "minimum_evidence",
+        "decision_table",
+        "procedure",
+        "responsibility",
+        "exception_failure",
+        "worked_case",
+        "cross_references"
+      ]
+    },
+    {
+      "record_type": "current_policy",
+      "policy_id": "TSB-FRAUD-03-2",
+      "document_id": "TSB-DOC-FRAUD-03",
+      "title": "Account takeover containment",
+      "scope": "internet banking",
+      "department": "fraud",
+      "version": "2.0",
+      "status": "current",
+      "effective_from": "2026-03-01",
+      "effective_to": null,
+      "classification": "internal_confidential",
+      "allowed_roles": [
+        "fraud_analyst",
+        "fraud_manager",
+        "investigator",
+        "internal_auditor"
+      ],
+      "approved_tool": null,
+      "authority": true,
+      "pages": [
+        91,
+        92
+      ],
+      "section_chunks": [
+        "control_objective",
+        "mandatory_requirement",
+        "trigger_applicability",
+        "minimum_evidence",
+        "decision_table",
+        "procedure",
+        "responsibility",
+        "exception_failure",
+        "worked_case",
+        "cross_references"
+      ]
+    },
+    {
+      "record_type": "current_policy",
+      "policy_id": "TSB-FRAUD-04-1",
+      "document_id": "TSB-DOC-FRAUD-04",
+      "title": "Fraud case evidence preservation",
+      "scope": "mobile banking",
+      "department": "fraud",
+      "version": "2.0",
+      "status": "current",
+      "effective_from": "2026-04-01",
+      "effective_to": null,
+      "classification": "internal_confidential",
+      "allowed_roles": [
+        "fraud_analyst",
+        "fraud_manager",
+        "investigator",
+        "internal_auditor"
+      ],
+      "approved_tool": null,
+      "authority": true,
+      "pages": [
+        93,
+        94
+      ],
+      "section_chunks": [
+        "control_objective",
+        "mandatory_requirement",
+        "trigger_applicability",
+        "minimum_evidence",
+        "decision_table",
+        "procedure",
+        "responsibility",
+        "exception_failure",
+        "worked_case",
+        "cross_references"
+      ]
+    },
+    {
+      "record_type": "current_policy",
+      "policy_id": "TSB-FRAUD-04-2",
+      "document_id": "TSB-DOC-FRAUD-04",
+      "title": "Fraud case evidence preservation",
+      "scope": "internet banking",
+      "department": "fraud",
+      "version": "2.0",
+      "status": "current",
+      "effective_from": "2026-04-01",
+      "effective_to": null,
+      "classification": "internal_confidential",
+      "allowed_roles": [
+        "fraud_analyst",
+        "fraud_manager",
+        "investigator",
+        "internal_auditor"
+      ],
+      "approved_tool": null,
+      "authority": true,
+      "pages": [
+        95,
+        96
+      ],
+      "section_chunks": [
+        "control_objective",
+        "mandatory_requirement",
+        "trigger_applicability",
+        "minimum_evidence",
+        "decision_table",
+        "procedure",
+        "responsibility",
+        "exception_failure",
+        "worked_case",
+        "cross_references"
+      ]
+    },
+    {
+      "record_type": "current_policy",
+      "policy_id": "TSB-FRAUD-05-1",
+      "document_id": "TSB-DOC-FRAUD-05",
+      "title": "Fraud hold release",
+      "scope": "mobile banking",
+      "department": "fraud",
+      "version": "2.0",
+      "status": "current",
+      "effective_from": "2026-05-01",
+      "effective_to": null,
+      "classification": "internal_confidential",
+      "allowed_roles": [
+        "fraud_analyst",
+        "fraud_manager",
+        "investigator",
+        "internal_auditor"
+      ],
+      "approved_tool": null,
+      "authority": true,
+      "pages": [
+        97,
+        98
+      ],
+      "section_chunks": [
+        "control_objective",
+        "mandatory_requirement",
+        "trigger_applicability",
+        "minimum_evidence",
+        "decision_table",
+        "procedure",
+        "responsibility",
+        "exception_failure",
+        "worked_case",
+        "cross_references"
+      ]
+    },
+    {
+      "record_type": "current_policy",
+      "policy_id": "TSB-FRAUD-05-2",
+      "document_id": "TSB-DOC-FRAUD-05",
+      "title": "Fraud hold release",
+      "scope": "internet banking",
+      "department": "fraud",
+      "version": "2.0",
+      "status": "current",
+      "effective_from": "2026-05-01",
+      "effective_to": null,
+      "classification": "internal_confidential",
+      "allowed_roles": [
+        "fraud_analyst",
+        "fraud_manager",
+        "investigator",
+        "internal_auditor"
+      ],
+      "approved_tool": null,
+      "authority": true,
+      "pages": [
+        99,
+        100
+      ],
+      "section_chunks": [
+        "control_objective",
+        "mandatory_requirement",
+        "trigger_applicability",
+        "minimum_evidence",
+        "decision_table",
+        "procedure",
+        "responsibility",
+        "exception_failure",
+        "worked_case",
+        "cross_references"
+      ]
+    },
+    {
+      "record_type": "current_policy",
+      "policy_id": "TSB-FRAUD-06-1",
+      "document_id": "TSB-DOC-FRAUD-06",
+      "title": "Transaction velocity calculation",
+      "scope": "mobile banking",
+      "department": "fraud",
+      "version": "2.0",
+      "status": "current",
+      "effective_from": "2026-06-01",
+      "effective_to": null,
+      "classification": "internal_confidential",
+      "allowed_roles": [
+        "fraud_analyst",
+        "fraud_manager",
+        "investigator",
+        "internal_auditor"
+      ],
+      "approved_tool": "calculate_transaction_velocity",
+      "authority": true,
+      "pages": [
+        101,
+        102
+      ],
+      "section_chunks": [
+        "control_objective",
+        "mandatory_requirement",
+        "trigger_applicability",
+        "minimum_evidence",
+        "decision_table",
+        "procedure",
+        "responsibility",
+        "exception_failure",
+        "worked_case",
+        "cross_references"
+      ]
+    },
+    {
+      "record_type": "current_policy",
+      "policy_id": "TSB-FRAUD-06-2",
+      "document_id": "TSB-DOC-FRAUD-06",
+      "title": "Transaction velocity calculation",
+      "scope": "internet banking",
+      "department": "fraud",
+      "version": "2.0",
+      "status": "current",
+      "effective_from": "2026-06-01",
+      "effective_to": null,
+      "classification": "internal_confidential",
+      "allowed_roles": [
+        "fraud_analyst",
+        "fraud_manager",
+        "investigator",
+        "internal_auditor"
+      ],
+      "approved_tool": "calculate_transaction_velocity",
+      "authority": true,
+      "pages": [
+        103,
+        104
+      ],
+      "section_chunks": [
+        "control_objective",
+        "mandatory_requirement",
+        "trigger_applicability",
+        "minimum_evidence",
+        "decision_table",
+        "procedure",
+        "responsibility",
+        "exception_failure",
+        "worked_case",
+        "cross_references"
+      ]
+    },
+    {
+      "record_type": "current_policy",
+      "policy_id": "TSB-INFORMATION-SECURITY-01-1",
+      "document_id": "TSB-DOC-INFORMATION-SECURITY-01",
+      "title": "Privileged access approval",
+      "scope": "employee systems",
+      "department": "information_security",
+      "version": "2.0",
+      "status": "current",
+      "effective_from": "2026-01-01",
+      "effective_to": null,
+      "classification": "internal_confidential",
+      "allowed_roles": [
+        "security_analyst",
+        "security_manager",
+        "incident_responder",
+        "internal_auditor"
+      ],
+      "approved_tool": null,
+      "authority": true,
+      "pages": [
+        105,
+        106
+      ],
+      "section_chunks": [
+        "control_objective",
+        "mandatory_requirement",
+        "trigger_applicability",
+        "minimum_evidence",
+        "decision_table",
+        "procedure",
+        "responsibility",
+        "exception_failure",
+        "worked_case",
+        "cross_references"
+      ]
+    },
+    {
+      "record_type": "current_policy",
+      "policy_id": "TSB-INFORMATION-SECURITY-01-2",
+      "document_id": "TSB-DOC-INFORMATION-SECURITY-01",
+      "title": "Privileged access approval",
+      "scope": "third-party access",
+      "department": "information_security",
+      "version": "2.0",
+      "status": "current",
+      "effective_from": "2026-01-01",
+      "effective_to": null,
+      "classification": "internal_confidential",
+      "allowed_roles": [
+        "security_analyst",
+        "security_manager",
+        "incident_responder",
+        "internal_auditor"
+      ],
+      "approved_tool": null,
+      "authority": true,
+      "pages": [
+        107,
+        108
+      ],
+      "section_chunks": [
+        "control_objective",
+        "mandatory_requirement",
+        "trigger_applicability",
+        "minimum_evidence",
+        "decision_table",
+        "procedure",
+        "responsibility",
+        "exception_failure",
+        "worked_case",
+        "cross_references"
+      ]
+    },
+    {
+      "record_type": "current_policy",
+      "policy_id": "TSB-INFORMATION-SECURITY-02-1",
+      "document_id": "TSB-DOC-INFORMATION-SECURITY-02",
+      "title": "Security incident reporting",
+      "scope": "employee systems",
+      "department": "information_security",
+      "version": "2.0",
+      "status": "current",
+      "effective_from": "2026-02-01",
+      "effective_to": null,
+      "classification": "internal_confidential",
+      "allowed_roles": [
+        "security_analyst",
+        "security_manager",
+        "incident_responder",
+        "internal_auditor"
+      ],
+      "approved_tool": null,
+      "authority": true,
+      "pages": [
+        109,
+        110
+      ],
+      "section_chunks": [
+        "control_objective",
+        "mandatory_requirement",
+        "trigger_applicability",
+        "minimum_evidence",
+        "decision_table",
+        "procedure",
+        "responsibility",
+        "exception_failure",
+        "worked_case",
+        "cross_references"
+      ]
+    },
+    {
+      "record_type": "current_policy",
+      "policy_id": "TSB-INFORMATION-SECURITY-02-2",
+      "document_id": "TSB-DOC-INFORMATION-SECURITY-02",
+      "title": "Security incident reporting",
+      "scope": "third-party access",
+      "department": "information_security",
+      "version": "2.0",
+      "status": "current",
+      "effective_from": "2026-02-01",
+      "effective_to": null,
+      "classification": "internal_confidential",
+      "allowed_roles": [
+        "security_analyst",
+        "security_manager",
+        "incident_responder",
+        "internal_auditor"
+      ],
+      "approved_tool": null,
+      "authority": true,
+      "pages": [
+        111,
+        112
+      ],
+      "section_chunks": [
+        "control_objective",
+        "mandatory_requirement",
+        "trigger_applicability",
+        "minimum_evidence",
+        "decision_table",
+        "procedure",
+        "responsibility",
+        "exception_failure",
+        "worked_case",
+        "cross_references"
+      ]
+    },
+    {
+      "record_type": "current_policy",
+      "policy_id": "TSB-INFORMATION-SECURITY-03-1",
+      "document_id": "TSB-DOC-INFORMATION-SECURITY-03",
+      "title": "Production data restriction",
+      "scope": "employee systems",
+      "department": "information_security",
+      "version": "2.0",
+      "status": "current",
+      "effective_from": "2026-03-01",
+      "effective_to": null,
+      "classification": "internal_confidential",
+      "allowed_roles": [
+        "security_analyst",
+        "security_manager",
+        "incident_responder",
+        "internal_auditor"
+      ],
+      "approved_tool": null,
+      "authority": true,
+      "pages": [
+        113,
+        114
+      ],
+      "section_chunks": [
+        "control_objective",
+        "mandatory_requirement",
+        "trigger_applicability",
+        "minimum_evidence",
+        "decision_table",
+        "procedure",
+        "responsibility",
+        "exception_failure",
+        "worked_case",
+        "cross_references"
+      ]
+    },
+    {
+      "record_type": "current_policy",
+      "policy_id": "TSB-INFORMATION-SECURITY-03-2",
+      "document_id": "TSB-DOC-INFORMATION-SECURITY-03",
+      "title": "Production data restriction",
+      "scope": "third-party access",
+      "department": "information_security",
+      "version": "2.0",
+      "status": "current",
+      "effective_from": "2026-03-01",
+      "effective_to": null,
+      "classification": "internal_confidential",
+      "allowed_roles": [
+        "security_analyst",
+        "security_manager",
+        "incident_responder",
+        "internal_auditor"
+      ],
+      "approved_tool": null,
+      "authority": true,
+      "pages": [
+        115,
+        116
+      ],
+      "section_chunks": [
+        "control_objective",
+        "mandatory_requirement",
+        "trigger_applicability",
+        "minimum_evidence",
+        "decision_table",
+        "procedure",
+        "responsibility",
+        "exception_failure",
+        "worked_case",
+        "cross_references"
+      ]
+    },
+    {
+      "record_type": "current_policy",
+      "policy_id": "TSB-INFORMATION-SECURITY-04-1",
+      "document_id": "TSB-DOC-INFORMATION-SECURITY-04",
+      "title": "Third-party access expiry",
+      "scope": "employee systems",
+      "department": "information_security",
+      "version": "2.0",
+      "status": "current",
+      "effective_from": "2026-04-01",
+      "effective_to": null,
+      "classification": "internal_confidential",
+      "allowed_roles": [
+        "security_analyst",
+        "security_manager",
+        "incident_responder",
+        "internal_auditor"
+      ],
+      "approved_tool": null,
+      "authority": true,
+      "pages": [
+        117,
+        118
+      ],
+      "section_chunks": [
+        "control_objective",
+        "mandatory_requirement",
+        "trigger_applicability",
+        "minimum_evidence",
+        "decision_table",
+        "procedure",
+        "responsibility",
+        "exception_failure",
+        "worked_case",
+        "cross_references"
+      ]
+    },
+    {
+      "record_type": "current_policy",
+      "policy_id": "TSB-INFORMATION-SECURITY-04-2",
+      "document_id": "TSB-DOC-INFORMATION-SECURITY-04",
+      "title": "Third-party access expiry",
+      "scope": "third-party access",
+      "department": "information_security",
+      "version": "2.0",
+      "status": "current",
+      "effective_from": "2026-04-01",
+      "effective_to": null,
+      "classification": "internal_confidential",
+      "allowed_roles": [
+        "security_analyst",
+        "security_manager",
+        "incident_responder",
+        "internal_auditor"
+      ],
+      "approved_tool": null,
+      "authority": true,
+      "pages": [
+        119,
+        120
+      ],
+      "section_chunks": [
+        "control_objective",
+        "mandatory_requirement",
+        "trigger_applicability",
+        "minimum_evidence",
+        "decision_table",
+        "procedure",
+        "responsibility",
+        "exception_failure",
+        "worked_case",
+        "cross_references"
+      ]
+    },
+    {
+      "record_type": "current_policy",
+      "policy_id": "TSB-INFORMATION-SECURITY-05-1",
+      "document_id": "TSB-DOC-INFORMATION-SECURITY-05",
+      "title": "Secrets handling",
+      "scope": "employee systems",
+      "department": "information_security",
+      "version": "2.0",
+      "status": "current",
+      "effective_from": "2026-05-01",
+      "effective_to": null,
+      "classification": "internal_confidential",
+      "allowed_roles": [
+        "security_analyst",
+        "security_manager",
+        "incident_responder",
+        "internal_auditor"
+      ],
+      "approved_tool": null,
+      "authority": true,
+      "pages": [
+        121,
+        122
+      ],
+      "section_chunks": [
+        "control_objective",
+        "mandatory_requirement",
+        "trigger_applicability",
+        "minimum_evidence",
+        "decision_table",
+        "procedure",
+        "responsibility",
+        "exception_failure",
+        "worked_case",
+        "cross_references"
+      ]
+    },
+    {
+      "record_type": "current_policy",
+      "policy_id": "TSB-INFORMATION-SECURITY-05-2",
+      "document_id": "TSB-DOC-INFORMATION-SECURITY-05",
+      "title": "Secrets handling",
+      "scope": "third-party access",
+      "department": "information_security",
+      "version": "2.0",
+      "status": "current",
+      "effective_from": "2026-05-01",
+      "effective_to": null,
+      "classification": "internal_confidential",
+      "allowed_roles": [
+        "security_analyst",
+        "security_manager",
+        "incident_responder",
+        "internal_auditor"
+      ],
+      "approved_tool": null,
+      "authority": true,
+      "pages": [
+        123,
+        124
+      ],
+      "section_chunks": [
+        "control_objective",
+        "mandatory_requirement",
+        "trigger_applicability",
+        "minimum_evidence",
+        "decision_table",
+        "procedure",
+        "responsibility",
+        "exception_failure",
+        "worked_case",
+        "cross_references"
+      ]
+    },
+    {
+      "record_type": "current_policy",
+      "policy_id": "TSB-INFORMATION-SECURITY-06-1",
+      "document_id": "TSB-DOC-INFORMATION-SECURITY-06",
+      "title": "Sensitive-log redaction",
+      "scope": "employee systems",
+      "department": "information_security",
+      "version": "2.0",
+      "status": "current",
+      "effective_from": "2026-06-01",
+      "effective_to": null,
+      "classification": "internal_confidential",
+      "allowed_roles": [
+        "security_analyst",
+        "security_manager",
+        "incident_responder",
+        "internal_auditor"
+      ],
+      "approved_tool": null,
+      "authority": true,
+      "pages": [
+        125,
+        126
+      ],
+      "section_chunks": [
+        "control_objective",
+        "mandatory_requirement",
+        "trigger_applicability",
+        "minimum_evidence",
+        "decision_table",
+        "procedure",
+        "responsibility",
+        "exception_failure",
+        "worked_case",
+        "cross_references"
+      ]
+    },
+    {
+      "record_type": "current_policy",
+      "policy_id": "TSB-INFORMATION-SECURITY-06-2",
+      "document_id": "TSB-DOC-INFORMATION-SECURITY-06",
+      "title": "Sensitive-log redaction",
+      "scope": "third-party access",
+      "department": "information_security",
+      "version": "2.0",
+      "status": "current",
+      "effective_from": "2026-06-01",
+      "effective_to": null,
+      "classification": "internal_confidential",
+      "allowed_roles": [
+        "security_analyst",
+        "security_manager",
+        "incident_responder",
+        "internal_auditor"
+      ],
+      "approved_tool": null,
+      "authority": true,
+      "pages": [
+        127,
+        128
+      ],
+      "section_chunks": [
+        "control_objective",
+        "mandatory_requirement",
+        "trigger_applicability",
+        "minimum_evidence",
+        "decision_table",
+        "procedure",
+        "responsibility",
+        "exception_failure",
+        "worked_case",
+        "cross_references"
+      ]
+    },
+    {
+      "record_type": "current_policy",
+      "policy_id": "TSB-OPERATIONS-01-1",
+      "document_id": "TSB-DOC-OPERATIONS-01",
+      "title": "Maker-checker control",
+      "scope": "branch operations",
+      "department": "operations",
+      "version": "2.0",
+      "status": "current",
+      "effective_from": "2026-01-01",
+      "effective_to": null,
+      "classification": "internal_confidential",
+      "allowed_roles": [
+        "operations_analyst",
+        "operations_manager",
+        "branch_manager",
+        "internal_auditor"
+      ],
+      "approved_tool": null,
+      "authority": true,
+      "pages": [
+        129,
+        130
+      ],
+      "section_chunks": [
+        "control_objective",
+        "mandatory_requirement",
+        "trigger_applicability",
+        "minimum_evidence",
+        "decision_table",
+        "procedure",
+        "responsibility",
+        "exception_failure",
+        "worked_case",
+        "cross_references"
+      ]
+    },
+    {
+      "record_type": "current_policy",
+      "policy_id": "TSB-OPERATIONS-01-2",
+      "document_id": "TSB-DOC-OPERATIONS-01",
+      "title": "Maker-checker control",
+      "scope": "central operations",
+      "department": "operations",
+      "version": "2.0",
+      "status": "current",
+      "effective_from": "2026-01-01",
+      "effective_to": null,
+      "classification": "internal_confidential",
+      "allowed_roles": [
+        "operations_analyst",
+        "operations_manager",
+        "branch_manager",
+        "internal_auditor"
+      ],
+      "approved_tool": null,
+      "authority": true,
+      "pages": [
+        131,
+        132
+      ],
+      "section_chunks": [
+        "control_objective",
+        "mandatory_requirement",
+        "trigger_applicability",
+        "minimum_evidence",
+        "decision_table",
+        "procedure",
+        "responsibility",
+        "exception_failure",
+        "worked_case",
+        "cross_references"
+      ]
+    },
+    {
+      "record_type": "current_policy",
+      "policy_id": "TSB-OPERATIONS-02-1",
+      "document_id": "TSB-DOC-OPERATIONS-02",
+      "title": "Daily reconciliation",
+      "scope": "branch operations",
+      "department": "operations",
+      "version": "2.0",
+      "status": "current",
+      "effective_from": "2026-02-01",
+      "effective_to": null,
+      "classification": "internal_confidential",
+      "allowed_roles": [
+        "operations_analyst",
+        "operations_manager",
+        "branch_manager",
+        "internal_auditor"
+      ],
+      "approved_tool": null,
+      "authority": true,
+      "pages": [
+        133,
+        134
+      ],
+      "section_chunks": [
+        "control_objective",
+        "mandatory_requirement",
+        "trigger_applicability",
+        "minimum_evidence",
+        "decision_table",
+        "procedure",
+        "responsibility",
+        "exception_failure",
+        "worked_case",
+        "cross_references"
+      ]
+    },
+    {
+      "record_type": "current_policy",
+      "policy_id": "TSB-OPERATIONS-02-2",
+      "document_id": "TSB-DOC-OPERATIONS-02",
+      "title": "Daily reconciliation",
+      "scope": "central operations",
+      "department": "operations",
+      "version": "2.0",
+      "status": "current",
+      "effective_from": "2026-02-01",
+      "effective_to": null,
+      "classification": "internal_confidential",
+      "allowed_roles": [
+        "operations_analyst",
+        "operations_manager",
+        "branch_manager",
+        "internal_auditor"
+      ],
+      "approved_tool": null,
+      "authority": true,
+      "pages": [
+        135,
+        136
+      ],
+      "section_chunks": [
+        "control_objective",
+        "mandatory_requirement",
+        "trigger_applicability",
+        "minimum_evidence",
+        "decision_table",
+        "procedure",
+        "responsibility",
+        "exception_failure",
+        "worked_case",
+        "cross_references"
+      ]
+    },
+    {
+      "record_type": "current_policy",
+      "policy_id": "TSB-OPERATIONS-03-1",
+      "document_id": "TSB-DOC-OPERATIONS-03",
+      "title": "Manual payment repair",
+      "scope": "branch operations",
+      "department": "operations",
+      "version": "2.0",
+      "status": "current",
+      "effective_from": "2026-03-01",
+      "effective_to": null,
+      "classification": "internal_confidential",
+      "allowed_roles": [
+        "operations_analyst",
+        "operations_manager",
+        "branch_manager",
+        "internal_auditor"
+      ],
+      "approved_tool": null,
+      "authority": true,
+      "pages": [
+        137,
+        138
+      ],
+      "section_chunks": [
+        "control_objective",
+        "mandatory_requirement",
+        "trigger_applicability",
+        "minimum_evidence",
+        "decision_table",
+        "procedure",
+        "responsibility",
+        "exception_failure",
+        "worked_case",
+        "cross_references"
+      ]
+    },
+    {
+      "record_type": "current_policy",
+      "policy_id": "TSB-OPERATIONS-03-2",
+      "document_id": "TSB-DOC-OPERATIONS-03",
+      "title": "Manual payment repair",
+      "scope": "central operations",
+      "department": "operations",
+      "version": "2.0",
+      "status": "current",
+      "effective_from": "2026-03-01",
+      "effective_to": null,
+      "classification": "internal_confidential",
+      "allowed_roles": [
+        "operations_analyst",
+        "operations_manager",
+        "branch_manager",
+        "internal_auditor"
+      ],
+      "approved_tool": null,
+      "authority": true,
+      "pages": [
+        139,
+        140
+      ],
+      "section_chunks": [
+        "control_objective",
+        "mandatory_requirement",
+        "trigger_applicability",
+        "minimum_evidence",
+        "decision_table",
+        "procedure",
+        "responsibility",
+        "exception_failure",
+        "worked_case",
+        "cross_references"
+      ]
+    },
+    {
+      "record_type": "current_policy",
+      "policy_id": "TSB-OPERATIONS-04-1",
+      "document_id": "TSB-DOC-OPERATIONS-04",
+      "title": "Batch retry control",
+      "scope": "branch operations",
+      "department": "operations",
+      "version": "2.0",
+      "status": "current",
+      "effective_from": "2026-04-01",
+      "effective_to": null,
+      "classification": "internal_confidential",
+      "allowed_roles": [
+        "operations_analyst",
+        "operations_manager",
+        "branch_manager",
+        "internal_auditor"
+      ],
+      "approved_tool": null,
+      "authority": true,
+      "pages": [
+        141,
+        142
+      ],
+      "section_chunks": [
+        "control_objective",
+        "mandatory_requirement",
+        "trigger_applicability",
+        "minimum_evidence",
+        "decision_table",
+        "procedure",
+        "responsibility",
+        "exception_failure",
+        "worked_case",
+        "cross_references"
+      ]
+    },
+    {
+      "record_type": "current_policy",
+      "policy_id": "TSB-OPERATIONS-04-2",
+      "document_id": "TSB-DOC-OPERATIONS-04",
+      "title": "Batch retry control",
+      "scope": "central operations",
+      "department": "operations",
+      "version": "2.0",
+      "status": "current",
+      "effective_from": "2026-04-01",
+      "effective_to": null,
+      "classification": "internal_confidential",
+      "allowed_roles": [
+        "operations_analyst",
+        "operations_manager",
+        "branch_manager",
+        "internal_auditor"
+      ],
+      "approved_tool": null,
+      "authority": true,
+      "pages": [
+        143,
+        144
+      ],
+      "section_chunks": [
+        "control_objective",
+        "mandatory_requirement",
+        "trigger_applicability",
+        "minimum_evidence",
+        "decision_table",
+        "procedure",
+        "responsibility",
+        "exception_failure",
+        "worked_case",
+        "cross_references"
+      ]
+    },
+    {
+      "record_type": "current_policy",
+      "policy_id": "TSB-OPERATIONS-05-1",
+      "document_id": "TSB-DOC-OPERATIONS-05",
+      "title": "Cash vault dual control",
+      "scope": "branch operations",
+      "department": "operations",
+      "version": "2.0",
+      "status": "current",
+      "effective_from": "2026-05-01",
+      "effective_to": null,
+      "classification": "internal_confidential",
+      "allowed_roles": [
+        "operations_analyst",
+        "operations_manager",
+        "branch_manager",
+        "internal_auditor"
+      ],
+      "approved_tool": null,
+      "authority": true,
+      "pages": [
+        145,
+        146
+      ],
+      "section_chunks": [
+        "control_objective",
+        "mandatory_requirement",
+        "trigger_applicability",
+        "minimum_evidence",
+        "decision_table",
+        "procedure",
+        "responsibility",
+        "exception_failure",
+        "worked_case",
+        "cross_references"
+      ]
+    },
+    {
+      "record_type": "current_policy",
+      "policy_id": "TSB-OPERATIONS-05-2",
+      "document_id": "TSB-DOC-OPERATIONS-05",
+      "title": "Cash vault dual control",
+      "scope": "central operations",
+      "department": "operations",
+      "version": "2.0",
+      "status": "current",
+      "effective_from": "2026-05-01",
+      "effective_to": null,
+      "classification": "internal_confidential",
+      "allowed_roles": [
+        "operations_analyst",
+        "operations_manager",
+        "branch_manager",
+        "internal_auditor"
+      ],
+      "approved_tool": null,
+      "authority": true,
+      "pages": [
+        147,
+        148
+      ],
+      "section_chunks": [
+        "control_objective",
+        "mandatory_requirement",
+        "trigger_applicability",
+        "minimum_evidence",
+        "decision_table",
+        "procedure",
+        "responsibility",
+        "exception_failure",
+        "worked_case",
+        "cross_references"
+      ]
+    },
+    {
+      "record_type": "current_policy",
+      "policy_id": "TSB-OPERATIONS-06-1",
+      "document_id": "TSB-DOC-OPERATIONS-06",
+      "title": "Business continuity activation",
+      "scope": "branch operations",
+      "department": "operations",
+      "version": "2.0",
+      "status": "current",
+      "effective_from": "2026-06-01",
+      "effective_to": null,
+      "classification": "internal_confidential",
+      "allowed_roles": [
+        "operations_analyst",
+        "operations_manager",
+        "branch_manager",
+        "internal_auditor"
+      ],
+      "approved_tool": null,
+      "authority": true,
+      "pages": [
+        149,
+        150
+      ],
+      "section_chunks": [
+        "control_objective",
+        "mandatory_requirement",
+        "trigger_applicability",
+        "minimum_evidence",
+        "decision_table",
+        "procedure",
+        "responsibility",
+        "exception_failure",
+        "worked_case",
+        "cross_references"
+      ]
+    },
+    {
+      "record_type": "current_policy",
+      "policy_id": "TSB-OPERATIONS-06-2",
+      "document_id": "TSB-DOC-OPERATIONS-06",
+      "title": "Business continuity activation",
+      "scope": "central operations",
+      "department": "operations",
+      "version": "2.0",
+      "status": "current",
+      "effective_from": "2026-06-01",
+      "effective_to": null,
+      "classification": "internal_confidential",
+      "allowed_roles": [
+        "operations_analyst",
+        "operations_manager",
+        "branch_manager",
+        "internal_auditor"
+      ],
+      "approved_tool": null,
+      "authority": true,
+      "pages": [
+        151,
+        152
+      ],
+      "section_chunks": [
+        "control_objective",
+        "mandatory_requirement",
+        "trigger_applicability",
+        "minimum_evidence",
+        "decision_table",
+        "procedure",
+        "responsibility",
+        "exception_failure",
+        "worked_case",
+        "cross_references"
+      ]
+    },
+    {
+      "record_type": "legacy_policy",
+      "policy_id": "TSB-COMPLIANCE-01-1-LEGACY",
+      "title": "Beneficial ownership verification",
+      "department": "compliance",
+      "scope": "individual customer relationships",
+      "version": "1.0",
+      "status": "superseded",
+      "effective_from": "2024-01-01",
+      "effective_to": "2026-01-01",
+      "replaced_by": "TSB-COMPLIANCE-01-1",
+      "classification": "internal_confidential",
+      "allowed_roles": [
+        "compliance_analyst",
+        "compliance_manager",
+        "mlro",
+        "internal_auditor"
+      ],
+      "approved_tool": null,
+      "authority": "historical_only",
+      "pages": [
+        153
+      ]
+    },
+    {
+      "record_type": "legacy_policy",
+      "policy_id": "TSB-COMPLIANCE-02-1-LEGACY",
+      "title": "Enhanced review for high-risk relationships",
+      "department": "compliance",
+      "scope": "individual customer relationships",
+      "version": "1.0",
+      "status": "superseded",
+      "effective_from": "2024-01-01",
+      "effective_to": "2026-02-01",
+      "replaced_by": "TSB-COMPLIANCE-02-1",
+      "classification": "internal_confidential",
+      "allowed_roles": [
+        "compliance_analyst",
+        "compliance_manager",
+        "mlro",
+        "internal_auditor"
+      ],
+      "approved_tool": null,
+      "authority": "historical_only",
+      "pages": [
+        154
+      ]
+    },
+    {
+      "record_type": "legacy_policy",
+      "policy_id": "TSB-CREDIT-01-1-LEGACY",
+      "title": "Income evidence freshness",
+      "department": "credit",
+      "scope": "retail lending",
+      "version": "1.0",
+      "status": "superseded",
+      "effective_from": "2024-01-01",
+      "effective_to": "2026-01-01",
+      "replaced_by": "TSB-CREDIT-01-1",
+      "classification": "internal_confidential",
+      "allowed_roles": [
+        "credit_analyst",
+        "credit_manager",
+        "risk_manager",
+        "internal_auditor"
+      ],
+      "approved_tool": null,
+      "authority": "historical_only",
+      "pages": [
+        155
+      ]
+    },
+    {
+      "record_type": "legacy_policy",
+      "policy_id": "TSB-CREDIT-02-1-LEGACY",
+      "title": "Independent collateral valuation",
+      "department": "credit",
+      "scope": "retail lending",
+      "version": "1.0",
+      "status": "superseded",
+      "effective_from": "2024-01-01",
+      "effective_to": "2026-02-01",
+      "replaced_by": "TSB-CREDIT-02-1",
+      "classification": "internal_confidential",
+      "allowed_roles": [
+        "credit_analyst",
+        "credit_manager",
+        "risk_manager",
+        "internal_auditor"
+      ],
+      "approved_tool": null,
+      "authority": "historical_only",
+      "pages": [
+        156
+      ]
+    },
+    {
+      "record_type": "legacy_policy",
+      "policy_id": "TSB-CUSTOMER-SERVICE-01-1-LEGACY",
+      "title": "Lost card response",
+      "department": "customer_service",
+      "scope": "branch-assisted service",
+      "version": "1.0",
+      "status": "superseded",
+      "effective_from": "2024-01-01",
+      "effective_to": "2026-01-01",
+      "replaced_by": "TSB-CUSTOMER-SERVICE-01-1",
+      "classification": "internal_confidential",
+      "allowed_roles": [
+        "service_agent",
+        "service_manager",
+        "branch_officer",
+        "internal_auditor"
+      ],
+      "approved_tool": null,
+      "authority": "historical_only",
+      "pages": [
+        157
+      ]
+    },
+    {
+      "record_type": "legacy_policy",
+      "policy_id": "TSB-CUSTOMER-SERVICE-02-1-LEGACY",
+      "title": "Contact detail change",
+      "department": "customer_service",
+      "scope": "branch-assisted service",
+      "version": "1.0",
+      "status": "superseded",
+      "effective_from": "2024-01-01",
+      "effective_to": "2026-02-01",
+      "replaced_by": "TSB-CUSTOMER-SERVICE-02-1",
+      "classification": "internal_confidential",
+      "allowed_roles": [
+        "service_agent",
+        "service_manager",
+        "branch_officer",
+        "internal_auditor"
+      ],
+      "approved_tool": null,
+      "authority": "historical_only",
+      "pages": [
+        158
+      ]
+    },
+    {
+      "record_type": "legacy_policy",
+      "policy_id": "TSB-FRAUD-01-1-LEGACY",
+      "title": "SIM-swap protective hold",
+      "department": "fraud",
+      "scope": "mobile banking",
+      "version": "1.0",
+      "status": "superseded",
+      "effective_from": "2024-01-01",
+      "effective_to": "2026-01-01",
+      "replaced_by": "TSB-FRAUD-01-1",
+      "classification": "internal_confidential",
+      "allowed_roles": [
+        "fraud_analyst",
+        "fraud_manager",
+        "investigator",
+        "internal_auditor"
+      ],
+      "approved_tool": null,
+      "authority": "historical_only",
+      "pages": [
+        159
+      ]
+    },
+    {
+      "record_type": "legacy_policy",
+      "policy_id": "TSB-FRAUD-02-1-LEGACY",
+      "title": "New-beneficiary velocity alert",
+      "department": "fraud",
+      "scope": "mobile banking",
+      "version": "1.0",
+      "status": "superseded",
+      "effective_from": "2024-01-01",
+      "effective_to": "2026-02-01",
+      "replaced_by": "TSB-FRAUD-02-1",
+      "classification": "internal_confidential",
+      "allowed_roles": [
+        "fraud_analyst",
+        "fraud_manager",
+        "investigator",
+        "internal_auditor"
+      ],
+      "approved_tool": null,
+      "authority": "historical_only",
+      "pages": [
+        160
+      ]
+    },
+    {
+      "record_type": "legacy_policy",
+      "policy_id": "TSB-INFORMATION-SECURITY-01-1-LEGACY",
+      "title": "Privileged access approval",
+      "department": "information_security",
+      "scope": "employee systems",
+      "version": "1.0",
+      "status": "superseded",
+      "effective_from": "2024-01-01",
+      "effective_to": "2026-01-01",
+      "replaced_by": "TSB-INFORMATION-SECURITY-01-1",
+      "classification": "internal_confidential",
+      "allowed_roles": [
+        "security_analyst",
+        "security_manager",
+        "incident_responder",
+        "internal_auditor"
+      ],
+      "approved_tool": null,
+      "authority": "historical_only",
+      "pages": [
+        161
+      ]
+    },
+    {
+      "record_type": "legacy_policy",
+      "policy_id": "TSB-INFORMATION-SECURITY-02-1-LEGACY",
+      "title": "Security incident reporting",
+      "department": "information_security",
+      "scope": "employee systems",
+      "version": "1.0",
+      "status": "superseded",
+      "effective_from": "2024-01-01",
+      "effective_to": "2026-02-01",
+      "replaced_by": "TSB-INFORMATION-SECURITY-02-1",
+      "classification": "internal_confidential",
+      "allowed_roles": [
+        "security_analyst",
+        "security_manager",
+        "incident_responder",
+        "internal_auditor"
+      ],
+      "approved_tool": null,
+      "authority": "historical_only",
+      "pages": [
+        162
+      ]
+    },
+    {
+      "record_type": "legacy_policy",
+      "policy_id": "TSB-OPERATIONS-01-1-LEGACY",
+      "title": "Maker-checker control",
+      "department": "operations",
+      "scope": "branch operations",
+      "version": "1.0",
+      "status": "superseded",
+      "effective_from": "2024-01-01",
+      "effective_to": "2026-01-01",
+      "replaced_by": "TSB-OPERATIONS-01-1",
+      "classification": "internal_confidential",
+      "allowed_roles": [
+        "operations_analyst",
+        "operations_manager",
+        "branch_manager",
+        "internal_auditor"
+      ],
+      "approved_tool": null,
+      "authority": "historical_only",
+      "pages": [
+        163
+      ]
+    },
+    {
+      "record_type": "legacy_policy",
+      "policy_id": "TSB-OPERATIONS-02-1-LEGACY",
+      "title": "Daily reconciliation",
+      "department": "operations",
+      "scope": "branch operations",
+      "version": "1.0",
+      "status": "superseded",
+      "effective_from": "2024-01-01",
+      "effective_to": "2026-02-01",
+      "replaced_by": "TSB-OPERATIONS-02-1",
+      "classification": "internal_confidential",
+      "allowed_roles": [
+        "operations_analyst",
+        "operations_manager",
+        "branch_manager",
+        "internal_auditor"
+      ],
+      "approved_tool": null,
+      "authority": "historical_only",
+      "pages": [
+        164
+      ]
+    },
+    {
+      "record_type": "untrusted_attachment",
+      "attachment_id": "TSB-ATTACK-MEMO-01",
+      "linked_policy": "TSB-COMPLIANCE-01-1",
+      "authority": false,
+      "must_not_cite": true,
+      "classification": "adversarial_test",
+      "pages": [
+        165
+      ]
+    },
+    {
+      "record_type": "untrusted_attachment",
+      "attachment_id": "TSB-ATTACK-MEMO-02",
+      "linked_policy": "TSB-CREDIT-01-2",
+      "authority": false,
+      "must_not_cite": true,
+      "classification": "adversarial_test",
+      "pages": [
+        166
+      ]
+    },
+    {
+      "record_type": "untrusted_attachment",
+      "attachment_id": "TSB-ATTACK-MEMO-03",
+      "linked_policy": "TSB-CUSTOMER-SERVICE-01-2",
+      "authority": false,
+      "must_not_cite": true,
+      "classification": "adversarial_test",
+      "pages": [
+        167
+      ]
+    },
+    {
+      "record_type": "untrusted_attachment",
+      "attachment_id": "TSB-ATTACK-MEMO-04",
+      "linked_policy": "TSB-FRAUD-01-2",
+      "authority": false,
+      "must_not_cite": true,
+      "classification": "adversarial_test",
+      "pages": [
+        168
+      ]
+    },
+    {
+      "record_type": "untrusted_attachment",
+      "attachment_id": "TSB-ATTACK-MEMO-05",
+      "linked_policy": "TSB-INFORMATION-SECURITY-01-2",
+      "authority": false,
+      "must_not_cite": true,
+      "classification": "adversarial_test",
+      "pages": [
+        169
+      ]
+    },
+    {
+      "record_type": "untrusted_attachment",
+      "attachment_id": "TSB-ATTACK-MEMO-06",
+      "linked_policy": "TSB-OPERATIONS-01-2",
+      "authority": false,
+      "must_not_cite": true,
+      "classification": "adversarial_test",
+      "pages": [
+        170
+      ]
+    }
+  ]
+}

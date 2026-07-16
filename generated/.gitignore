@@ -1,4 +1,0 @@
-*.jsonl
-policy_catalog.json
-quality_report.json
-!.gitignore
