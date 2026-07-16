@@ -24,6 +24,8 @@ class Settings(BaseSettings):
     reranker_model: str = "BAAI/bge-reranker-base"
     retrieval_k: int = Field(default=16, ge=4, le=100)
     rerank_top_n: int = Field(default=5, ge=2, le=20)
+    generation_max_tokens: int = Field(default=512, ge=128, le=2048)
+    verifier_max_tokens: int = Field(default=768, ge=256, le=2048)
 
     upstash_redis_rest_url: str | None = None
     upstash_redis_rest_token: str | None = None

@@ -1,6 +1,6 @@
 from langchain_core.documents import Document
 
-from takasecure_rag.graph import _display_page
+from takasecure_rag.graph import _display_page, _length_failure_verification
 from takasecure_rag.schemas import ChatResponse, GroundedAnswer, Verification
 
 
@@ -14,6 +14,13 @@ def test_pdf_page_label_wins_when_present():
         metadata={"page": 129, "page_label": "A-12"},
     )
     assert _display_page(document) == "A-12"
+
+
+def test_truncated_verifier_fails_closed():
+    verification = _length_failure_verification()
+    assert not verification.passed
+    assert verification.unsupported_claims
+    assert "withheld" in verification.reasoning
 
 
 def test_tool_routing_fields_survive_response_contract():
