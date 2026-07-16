@@ -95,7 +95,7 @@ function createLoadingMessage() {
       <div class="message-label">TakaSecure intelligence</div>
       <div class="loading-card">
         <div class="loading-dots"><span></span><span></span><span></span></div>
-        <span>Retrieving policy evidence and verifying the response…</span>
+        <span>Retrieving authorized policy evidence and verifying the response…</span>
       </div>
     </div>
   `;
@@ -105,6 +105,9 @@ function createLoadingMessage() {
 function createAssistantMessage(response) {
   const citations = Array.isArray(response.citations) ? response.citations : [];
   const passed = Boolean(response.verification?.passed);
+  const tool = response.requires_tool && response.tool_name
+    ? `<span class="tool-pill">Approved tool: ${escapeHtml(response.tool_name)}</span>`
+    : "";
   const node = document.createElement("article");
   node.className = "message assistant";
   node.innerHTML = `
@@ -113,6 +116,7 @@ function createAssistantMessage(response) {
       <div class="message-label">TakaSecure intelligence</div>
       <div class="answer-card ${passed ? "" : "unverified"}">
         ${formatAnswer(response.answer)}
+        ${tool}
         ${citations.length ? `<div class="inline-citations">${citations.map((item) => `<span class="citation-pill">${escapeHtml(item)}</span>`).join("")}</div>` : ""}
       </div>
     </div>
@@ -131,13 +135,26 @@ function renderDiagnostics(response, elapsedMs) {
   const passed = Boolean(response.verification?.passed);
 
   elements.strategy.textContent = response.retrieval_strategy === "multi_query" ? "Multi-query" : "Direct";
-  elements.cache.textContent = response.cache_hit ? "Hit" : "Miss";
+  const cacheLabels = {
+    hit: "Hit",
+    miss: "Miss",
+    disabled: "Disabled",
+    error: "Bypassed",
+    bypass: "Bypassed",
+  };
+  elements.cache.textContent = cacheLabels[response.cache_status]
+    || (response.cache_hit ? "Hit" : "Miss");
   elements.corrections.textContent = String(response.correction_attempts ?? 0);
   elements.latency.textContent = elapsedMs < 1000 ? `${elapsedMs} ms` : `${(elapsedMs / 1000).toFixed(1)} s`;
 
-  elements.badge.textContent = passed ? "Verified" : "Review required";
-  elements.badge.className = `verified-badge ${passed ? "passed" : "failed"}`;
-  elements.verifierReason.textContent = response.verification?.reasoning || "No verifier explanation was returned.";
+  elements.badge.textContent = response.access_denied
+    ? "Access denied"
+    : (passed ? "Verified" : "Review required");
+  elements.badge.className = `verified-badge ${response.access_denied ? "denied" : (passed ? "passed" : "failed")}`;
+  const verifierReason = response.verification?.reasoning || "No verifier explanation was returned.";
+  elements.verifierReason.textContent = verifierReason.length > 900
+    ? `${verifierReason.slice(0, 897)}…`
+    : verifierReason;
 
   elements.citationCount.textContent = String(citations.length);
   elements.citationEmpty.hidden = citations.length > 0;
@@ -152,7 +169,7 @@ function renderDiagnostics(response, elapsedMs) {
     const card = document.createElement("div");
     card.className = "source-card";
     const sourceName = source.source ? String(source.source).split(/[\\/]/).pop() : "Policy corpus";
-    const page = Number.isInteger(source.page) ? source.page + 1 : "—";
+    const page = source.page ?? "—";
     card.innerHTML = `
       <button class="source-button" type="button" aria-expanded="false">
         <strong>${escapeHtml(sourceName || `Evidence ${index + 1}`)}</strong>
@@ -194,6 +211,11 @@ function resizeInput() {
 async function submitQuestion(question) {
   const trimmed = question.trim();
   if (!trimmed || state.loading) return;
+  if (!elements.role.value) {
+    showToast("Select an authorized role before asking a policy question.", "error");
+    elements.role.focus();
+    return;
+  }
 
   showConversation();
   elements.messages.appendChild(createUserMessage(trimmed));

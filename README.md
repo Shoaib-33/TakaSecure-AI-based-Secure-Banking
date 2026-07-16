@@ -13,6 +13,8 @@ policy, regulation, or customer data.
 - LangChain and LangGraph orchestration with model-selected retrieval strategy.
 - BGE-M3 dense retrieval plus Qdrant BM25 hybrid retrieval and fusion.
 - Multi-query rewriting, cross-encoder reranking, corrective retrieval, and answer verification.
+- Catalog-backed role and department filtering before evidence reaches the model.
+- Structured approved-tool routing with deterministic citation and tool validation.
 - Upstash Redis SHA-256 exact-match caching for verified repeated responses.
 - A 176-page synthetic policy corpus and a 166-question RAG benchmark.
 - A responsive professional HTML, CSS, and JavaScript banking policy console.
@@ -81,7 +83,8 @@ training does not appear in validation or test, including scope variants.
 ## Limitations
 
 - All policies, cases, institutions, identifiers, and operational rules are synthetic.
+- The UI role selector demonstrates authorization policy; it is not user authentication.
 - The corpus has not been reviewed by banking, legal, compliance, fraud, or security professionals.
 - Automated checks validate structure and provenance consistency, not real-world policy suitability.
 - The project must not be represented as Bangladesh Bank guidance or used for real banking decisions.
-- Production deployment would require institution-approved documents, access controls, privacy controls, and domain-expert review.
+- Production deployment would require identity-provider authentication, server-derived roles, institution-approved documents, privacy controls, and domain-expert review.

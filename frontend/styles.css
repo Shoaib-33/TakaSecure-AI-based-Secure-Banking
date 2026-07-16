@@ -183,6 +183,7 @@ button { color: inherit; }
 .answer-card.unverified { border-left: 3px solid var(--red-600); }
 .inline-citations { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 14px; padding-top: 13px; border-top: 1px solid var(--slate-100); }
 .citation-pill { display: inline-flex; padding: 4px 8px; color: var(--teal-600); background: var(--teal-100); border: 1px solid #c1e8e4; border-radius: 6px; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 10px; font-weight: 700; }
+.tool-pill { display: inline-flex; margin-top: 12px; padding: 6px 9px; color: var(--navy-800); background: #edf2ff; border: 1px solid #cbd7f6; border-radius: 6px; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 10px; font-weight: 750; }
 
 .loading-card { display: flex; align-items: center; gap: 12px; padding: 15px 18px; color: var(--slate-600); background: #fff; border: 1px solid var(--slate-200); border-radius: 4px 14px 14px; box-shadow: var(--shadow-sm); }
 .loading-dots { display: flex; gap: 4px; }
@@ -217,6 +218,7 @@ button { color: inherit; }
 .verified-badge.neutral { color: var(--slate-600); background: var(--slate-200); }
 .verified-badge.passed { color: var(--green-600); background: var(--green-100); }
 .verified-badge.failed { color: var(--red-600); background: var(--red-100); }
+.verified-badge.denied { color: #8a4b00; background: #fff1d6; }
 
 .metric-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 9px; margin: 22px 0; }
 .metric-card { min-height: 75px; padding: 13px; background: #fff; border: 1px solid var(--slate-200); border-radius: 10px; box-shadow: var(--shadow-sm); }

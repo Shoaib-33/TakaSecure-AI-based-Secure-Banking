@@ -14,10 +14,12 @@ answer generation, and grounded-answer verification.
 - `StateGraph` implements the corrective retrieval and verification cycles.
 - `UpstashRedisByteStore` stores SHA-256 exact-match verified responses.
 - `PyPDFLoader` and `RecursiveCharacterTextSplitter` ingest the policy corpus.
+- `PolicyCatalog` applies role/department authorization and supplies approved tool names.
 
 The only handwritten code is configuration, typed schemas, prompts, graph wiring,
-cache identity construction, and API boundaries. Safety limits and cache routing
-remain deterministic; semantic decisions are made by the model.
+cache identity construction, authorization enforcement, and API boundaries.
+Safety limits, access decisions, citation membership, approved-tool validation,
+and cache routing remain deterministic; semantic decisions are made by the model.
 
 All model decisions use vLLM JSON-schema constrained output through LangChain,
 so no vLLM tool-call parser is required for routing, grading, or verification.
@@ -78,7 +80,13 @@ and pipeline version. Changing any of these produces a different cache entry.
 ## Important behavior
 
 - Cache availability never determines whether the RAG request succeeds.
+- An Upstash timeout or error disables caching for the process and lets RAG continue.
 - Cache hits bypass retrieval and vLLM; misses run the full graph.
+- Evidence is filtered against `data/sft/policy_catalog.json` before grading or generation.
+- The selected UI role is demo request context, not an authenticated identity claim.
+- Production must derive role and department from a verified server-side identity.
+- Tool names are model-selected only from catalog-approved metadata and are checked before publication.
+- Source pages are normalized to human-readable PDF page numbers by the backend.
 - Query planning and evidence decisions come from structured model output.
 - One corrective retrieval and one regeneration are hard safety bounds.
 - The corpus is synthetic and must not be presented as real banking policy.

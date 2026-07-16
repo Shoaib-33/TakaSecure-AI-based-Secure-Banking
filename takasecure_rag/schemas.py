@@ -18,6 +18,7 @@ class QueryPlan(BaseModel):
     strategy: Literal["direct", "multi_query"]
     retrieval_question: str
     reasoning: str
+    requires_tool: bool = False
 
 
 class RetrievalGrade(BaseModel):
@@ -33,6 +34,9 @@ class GroundedAnswer(BaseModel):
     citations: list[str]
     grounded: bool
     escalation_required: bool = False
+    requires_tool: bool = False
+    tool_name: str | None = None
+    tool_inputs: dict[str, str | int | float | bool | None] = Field(default_factory=dict)
 
 
 class Verification(BaseModel):
@@ -53,3 +57,8 @@ class ChatResponse(BaseModel):
     correction_attempts: int
     verification: Verification
     sources: list[dict]
+    cache_status: Literal["hit", "miss", "disabled", "error", "bypass"] = "disabled"
+    access_denied: bool = False
+    requires_tool: bool = False
+    tool_name: str | None = None
+    tool_inputs: dict[str, str | int | float | bool | None] = Field(default_factory=dict)
