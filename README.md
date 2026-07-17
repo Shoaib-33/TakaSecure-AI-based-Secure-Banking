@@ -28,20 +28,34 @@ FastAPI, and a professional web interface.
 
 ## Problem statement
 
-Bank employees need fast answers from large policy collections, but a generic
-chatbot can hallucinate thresholds, cite superseded policies, follow malicious
-instructions embedded in documents, cross role boundaries, or choose an
-unapproved calculation tool.
+Bank employees need fast answers from large policy collections, but those
+documents, prompts, retrieved passages, and generated answers may contain
+confidential internal information. Sending them to an external proprietary
+model API can create unacceptable data-residency, retention, access, and
+third-party exposure risks. A generic chatbot can also hallucinate thresholds,
+cite superseded policies, follow malicious document instructions, cross role
+boundaries, or choose an unapproved calculation tool.
 
-TakaSecure uses two complementary layers:
+TakaSecure addresses knowledge quality and inference confidentiality with three
+complementary layers:
 
 1. **Supervised fine-tuning** teaches citations, structured JSON, abstention,
    policy-conflict handling, injection resistance, and tool contracts.
 2. **Retrieval-augmented generation** supplies current evidence at runtime,
    filters it by role and department, and verifies answers before publication.
+3. **Self-hosted vLLM inference** serves the base model and banking LoRA through
+   an OpenAI-compatible API under the deployer's control. This avoids sending
+   policy questions and retrieved context to a third-party hosted LLM API and
+   enables private-network or on-premises deployment, organization-controlled
+   logging and retention, API authentication, and independent scaling.
 
 Fine-tuning shapes behavior; RAG supplies changing knowledge. Model weights are
-never treated as the policy database.
+never treated as the policy database, and vLLM provides the controlled inference
+boundary. vLLM is not a security product by itself: production confidentiality
+still requires private networking, TLS, identity-based authorization, secrets
+management, encrypted storage, and approved telemetry controls. The current
+RunPod public-proxy deployment is a portfolio demonstration of that architecture,
+not the final private-banking network design.
 
 ## Architecture
 
