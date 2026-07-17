@@ -11,8 +11,13 @@ FastAPI, and a professional web interface.
 > repository is synthetic. This is a portfolio demonstration—not banking,
 > legal, regulatory, credit, fraud, or security advice.
 
+## Demo video
+
+[▶ Watch the TakaSecure project demo on Loom](https://www.loom.com/share/fbcc349553004b5194132c54ceba0963)
+
 ## Contents
 
+- [Demo video](#demo-video)
 - [Problem statement](#problem-statement)
 - [Architecture](#architecture)
 - [Technology stack](#technology-stack)
