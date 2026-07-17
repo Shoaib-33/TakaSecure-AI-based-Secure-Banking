@@ -15,9 +15,37 @@ FastAPI, and a professional web interface.
 
 [▶ Watch the TakaSecure project demo on Loom](https://www.loom.com/share/fbcc349553004b5194132c54ceba0963)
 
+## Chatbot features
+
+| Feature | What it does |
+|---|---|
+| Role- and department-based policy access | Validates the selected role and department against the trusted policy catalog before retrieval; unauthorized scopes are denied without sending evidence to the model. |
+| Adaptive retrieval routing | Uses structured model output to choose direct retrieval for precise questions or multi-query retrieval when rewriting can improve recall. |
+| Hybrid semantic and lexical search | Combines BGE-M3 dense embeddings with BM25 sparse retrieval in Qdrant so both semantic meaning and exact policy identifiers are discoverable. |
+| Query rewriting | Generates alternative search queries for ambiguous or multi-part questions without changing policy IDs, dates, amounts, or thresholds. |
+| Cross-encoder reranking | Reranks hybrid candidates with BGE to keep the most relevant evidence passages. |
+| Corrective RAG | Grades retrieved evidence and performs one focused corrective retrieval when the first result set is insufficient. |
+| Grounded answers with citations | Answers only from authorized retrieved evidence and returns traceable policy IDs and PDF source pages. |
+| Current-versus-legacy resolution | Detects superseded policies and requires the current applicable version to govern the answer. |
+| Prompt-injection resistance | Treats retrieved documents as untrusted data, ignores embedded instructions, and verifies that document text did not control the answer. |
+| Approved calculation-tool routing | Returns structured tool names and inputs only when required, then checks the selected tool against catalog-approved metadata. |
+| Answer verification | Runs a separate verifier plus deterministic citation and tool checks before publishing a response. |
+| Safe abstention and escalation | Withholds unsupported answers and requests human escalation when evidence remains insufficient or verification fails. |
+| Verified exact-match caching | Optionally caches only verified responses using a SHA-256 identity over the request, role, department, model, corpus, and pipeline version. |
+| Conversation and date context | Accepts bounded conversation history and an optional as-of date for policy questions. |
+| Response diagnostics | Displays retrieval strategy, cache state, corrections, latency, citations, source previews, and verifier reasoning in the UI. |
+| Structured API contracts | Uses Pydantic and JSON-schema constrained outputs for planning, grading, answers, verification, tools, and FastAPI responses. |
+
+> [!NOTE]
+> Role selection in the current UI demonstrates authorization rules but does not
+> authenticate the user. A production deployment must derive roles and
+> departments from a verified identity provider and enforce entitlements on the
+> server.
+
 ## Contents
 
 - [Demo video](#demo-video)
+- [Chatbot features](#chatbot-features)
 - [Problem statement](#problem-statement)
 - [Architecture](#architecture)
 - [Technology stack](#technology-stack)
