@@ -36,12 +36,6 @@ FastAPI, and a professional web interface.
 | Response diagnostics | Displays retrieval strategy, cache state, corrections, latency, citations, source previews, and verifier reasoning in the UI. |
 | Structured API contracts | Uses Pydantic and JSON-schema constrained outputs for planning, grading, answers, verification, tools, and FastAPI responses. |
 
-> [!NOTE]
-> Role selection in the current UI demonstrates authorization rules but does not
-> authenticate the user. A production deployment must derive roles and
-> departments from a verified identity provider and enforce entitlements on the
-> server.
-
 ## Contents
 
 - [Demo video](#demo-video)
