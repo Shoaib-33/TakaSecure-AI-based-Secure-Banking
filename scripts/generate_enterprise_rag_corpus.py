@@ -9,7 +9,6 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
-import textwrap
 from collections import defaultdict
 from pathlib import Path
 from typing import Any, Iterable
@@ -540,7 +539,7 @@ def current_policy_pages(doc: fitz.Document, policy: Policy, related: list[Polic
     y = title(page, 76, policy.title, f"SCOPE: {policy.scope.upper()} | RECORD B - EXECUTION AND EVIDENCE")
     y = band(page, y, "Required operating procedure")
     procedure = [
-        f"1. Authenticate the actor and resolve allowed roles from server-side identity claims.",
+        "1. Authenticate the actor and resolve allowed roles from server-side identity claims.",
         f"2. Confirm the event belongs to {policy.scope}; retrieve the current record by policy ID and effective date.",
         f"3. Collect and validate the minimum evidence set in {profile['system']} without copying restricted data into prompts.",
         f"4. Apply the mandatory requirement exactly. {'Route calculation to ' + policy.calculation_tool + '; do not calculate in model text.' if policy.calculation_tool else 'Do not invent thresholds, approvals, or exceptions.'}",

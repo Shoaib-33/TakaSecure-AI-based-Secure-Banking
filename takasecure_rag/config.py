@@ -26,6 +26,8 @@ class Settings(BaseSettings):
     rerank_top_n: int = Field(default=5, ge=2, le=20)
     generation_max_tokens: int = Field(default=512, ge=128, le=2048)
     verifier_max_tokens: int = Field(default=768, ge=256, le=2048)
+    ragas_evaluator_model: str = "base-llama"
+    ragas_sample_size: int = Field(default=24, ge=1, le=166)
 
     upstash_redis_rest_url: str | None = None
     upstash_redis_rest_token: str | None = None

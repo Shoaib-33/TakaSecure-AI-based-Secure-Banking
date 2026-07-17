@@ -1,0 +1,25 @@
+{
+  "department_distribution": {
+    "compliance": 9,
+    "credit": 9,
+    "customer_service": 7,
+    "fraud": 9,
+    "information_security": 9,
+    "operations": 7
+  },
+  "golden_rows": 50,
+  "seed": 20260717,
+  "sha256": "7d5629294872fe48c91443ca7f9e91fce97a8f453daebed9e157a07f0ed1ceeb",
+  "source_benchmark": "data\\rag\\v4\\TakaSecure_RAG_Evaluation_Benchmark_v4.jsonl",
+  "source_benchmark_rows": 166,
+  "task_distribution": {
+    "evidence": 20,
+    "single_hop": 20,
+    "temporal_conflict": 5,
+    "tool_routing": 5
+  },
+  "unique_benchmark_ids": 50,
+  "unique_questions": 43,
+  "valid": true,
+  "version": "1.0"
+}
